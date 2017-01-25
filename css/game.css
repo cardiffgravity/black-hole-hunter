@@ -582,3 +582,7 @@
 #footer {
   height: 2em;
 }
+
+[v-cloak] {
+  display: none;
+}
