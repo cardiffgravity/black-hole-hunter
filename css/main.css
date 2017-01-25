@@ -1,0 +1,82 @@
+/**
+ * Body
+ */
+
+body {
+  background-color: rgb(6,6,27);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+/**
+ * Header
+ */
+
+#header {
+  height: 10em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+#title {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6em;
+  font-weight: 700;
+  letter-spacing: 1em;
+  color: #eeeeee;
+  margin: 0;
+  white-space: nowrap;
+  text-indent: 1em;
+}
+
+@media (max-width: 992px) {
+  #title {
+    white-space: normal;
+    text-indent: 0;
+  }
+}
+
+#header img {
+  width: 100%;
+  padding: 20%;
+}
+
+a, a:hover, a:focus, a:active {
+  color: #eeeeee;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/**
+ * .btn-outline-inverse
+ *
+ * Used alot throughout Bootstraps websites. Its clean, really nice and very
+ * similar to the game page style, but not in the current version of BS. Not
+ * sure if it will be in an upcomming release (did unsearch a little :D) but
+ * for now pulled the styles internally and updated to reflect my bgcolor etc.
+ *
+ * \- [Source](http://getbootstrap.com/assets/css/docs.min.css)
+ */
+.btn-outline-inverse {
+    color: #eeeeee;
+    background-color: transparent;
+    border-color: #eeeeee;
+}
+
+.btn-outline-inverse:active,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:hover {
+  color:rgb(6,6,27);;
+  text-shadow:none;
+  background-color:#eeeeee;
+  border-color:#eeeeee;
+}
+
+button.btn,
+button.btn:active,
+button.btn:active:focus, /* This is the key selector to remove the BS outline */
+button.btn:focus,
+button.btn:hover {
+    outline: 0;
+}

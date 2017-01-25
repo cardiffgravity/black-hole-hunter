@@ -1,0 +1,43 @@
+{
+  "name": "spectrum",
+  "version": "0.1.0",
+  "description": "Move to find gravitational waves",
+  "main": "/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Edward Fauchon-Jones",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Galadirith/spectrum.git"
+  },
+  "keywords": [
+    "spectrum",
+    "gravitational",
+    "wave",
+    "waveform",
+    "physics",
+    "science",
+    "outreach"
+  ],
+  "bugs": {
+    "url": "https://github.com/Galadirith/spectrum/issues"
+  },
+  "homepage": "https://github.com/Galadirith/spectrum#readme",
+  "devDependencies": {
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.12.3",
+    "css-loader": "^0.26.1",
+    "extract-loader": "^0.1.0",
+    "file-loader": "^0.9.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^4.3.0",
+    "null-loader": "^0.1.1",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

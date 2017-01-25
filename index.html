@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Identification -->
+  <title>Black Hole Hunter</title>
+  <link rel="shortcut icon" href="./img/cardiff.ico" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <!-- Load fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,900italic,100italic,300,400italic,300italic,700,700italic,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Load site css -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/splash.css">
+
+</head>
+<body>
+
+  <!-- Splash -->
+  <div id="splash" class="container">
+
+    <!-- Header -->
+    <div id="header" class="row">
+      <div class="col-xs-2">
+        <a href="http://www.astro.cardiff.ac.uk/research/gravity/" target="_blank">
+          <img src="./img/cardiff.svg"/>
+        </a>
+      </div>
+      <div class="col-xs-8">
+        <div id="title">
+          <a href="http://www.blackholehunter.org/">
+            BLACK HOLE HUNTER
+          </a>
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <a href="http://ligo.org/" target="_blank">
+          <img src="./img/lsc-scale.gif">
+        </a>
+      </div>
+    </div>
+
+    <!-- Welcome -->
+    <div id="welcome-row" class="row">
+      <div class="col-xs-10 col-xs-offset-2 col-sm-9 col-sm-offset-3 col-md-7 col-md-offset-5">
+        &nbsp;
+
+        <!-- Welcome -->
+        <div id="welcome" class="op-in">
+
+          <!-- Message -->
+          <div id="welcome-msg">
+
+            <!-- Welcome title -->
+            <div id="welcome-title" class="title">
+              <template v-for="(loc, key) in locs">
+                <div
+                  :data-loc="key"
+                  v-html="loc.index.welcome.title">
+                </div>
+              </template>
+            </div>
+
+            <!-- Welcome text -->
+            <div id="welcome-text" class="text">
+              <template v-for="(loc, key) in locs">
+                <div
+                  :data-loc="key"
+                  v-html="loc.index.welcome.text">
+                </div>
+              </template>
+            </div>
+
+            <!-- Welcome Buttons -->
+            <div class="buttons">
+              <a href="game.html"><button
+                type="button"
+                class="btn btn-lg btn-outline-inverse">
+                <template v-for="(loc, key) in locs">
+                  <div
+                    :data-loc="key"
+                    v-html="loc.index.main['play-now']">
+                  </div>
+                </template>
+              </button></a>
+              <button
+                type="button"
+                class="btn btn-lg btn-outline-inverse"
+                @click.stop="about">
+                <template v-for="(loc, key) in locs">
+                  <div
+                    :data-loc="key"
+                    v-html="loc.index.main.about">
+                  </div>
+                </template>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Localization selection -->
+          <div class="loc-sel">
+            <template v-for="(loc, key) in locs">
+              <div
+                @click.stop="selectLoc"
+                :data-loc-sel="key"
+                v-html="loc.index.main.title">
+              </div>
+            </template>
+          </div>
+
+        </div>
+
+        <!-- About -->
+        <div id="about" class="op-out">
+          <div id="about-msg">
+
+            <!-- About title -->
+            <div id="about-title" class="title">
+              <template v-for="(loc, key) in locs">
+                <div
+                  :data-loc="key"
+                  v-html="loc.index.about.title">
+                </div>
+              </template>
+            </div>
+
+            <!-- About text -->
+            <div id="about-text" class="text">
+              <template v-for="(loc, key) in locs">
+                <div
+                  :data-loc="key"
+                  v-html="loc.index.about.text">
+                </div>
+              </template>
+            </div>
+
+            <!-- About Buttons -->
+            <div class="buttons">
+              <a href="game.html"><button
+                type="button"
+                class="btn btn-lg btn-outline-inverse">
+                <template v-for="(loc, key) in locs">
+                  <div
+                    :data-loc="key"
+                    v-html="loc.index.main['play-now']">
+                  </div>
+                </template>
+              </button></a>
+              <button
+                type="button"
+                class="btn btn-lg btn-outline-inverse"
+                @click.stop="home">
+                <template v-for="(loc, key) in locs">
+                  <div
+                    :data-loc="key"
+                    v-html="loc.index.main.home">
+                  </div>
+                </template>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Localization selection -->
+          <div class="loc-sel">
+            <template v-for="(loc, key) in locs">
+              <div
+                @click.stop="selectLoc"
+                :data-loc-sel="key"
+                v-html="loc.index.main.title">
+              </div>
+            </template>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer" class="row">
+      <div class="col-xs-12">
+        <div id="copyright">
+          Designed by
+          <a href="http://www.astro.cardiff.ac.uk/research/gravity/" target="_blank">
+            Cardiff University Gravitational Physics Group
+          </a>
+          </br>
+          Black Hole Hunter is released under the
+          <a href="./LICENSE.md" target="_blank">MIT license</a>,
+          images
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+            CC BY-SA 4.0
+          </a>,
+          Cardiff University branding &#169;
+          <a href="http://www.cardiff.ac.uk/" target="_blank">
+            Cardiff University
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Game form -->
+  <form id="play-now" method="post" action="./cgi-bin/game.py">
+    <input type="hidden" name="level" value="0"/>
+    <input type="hidden" name="lives" value="3"/>
+    <input id="play-now-loc" type="hidden" name="loc" value="en"/>
+  </form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src='https://unpkg.com/vue/dist/vue.js'></script>
+<script src="./js/splash.js"></script>
+
+<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-bottom"};
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+<!-- End Cookie Consent plugin -->
+
+</body>
+<html>
