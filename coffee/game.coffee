@@ -681,37 +681,14 @@ game = new Vue
           , 1200)
       , 1200, visibleWaveID())
 
-    submit: () ->
-      # Prepare form
-      form = $('<form></form>');
-      form.attr('method', 'post');
-      form.attr('action', '../cgi-bin/game.py');
+    nextLevel: () ->
+      window.open('/game.html', '_self')
 
-      # Prepare POST level data
-      field = $('<input></input>')
-      field.attr('type', 'hidden')
-      field.attr('name', 'level')
-      field.attr('value', $('#dial-col').data('level').toString())
-      form.append(field)
+    lost: () ->
+      window.open('/lost.html', '_self')
 
-      # Prepare POST lives data
-      field = $('<input></input>')
-      field.attr('type', 'hidden')
-      field.attr('name', 'lives')
-      field.attr('value', $('#dial-col').data('lives').toString())
-      form.append(field)
-
-      # Prepare POST localization value
-      locCookie = getCookie('loc') or 'en'
-      field = $('<input></input>')
-      field.attr('type', 'hidden')
-      field.attr('name', 'loc')
-      field.attr('value', locCookie)
-      form.append(field)
-
-      # Form needs to be a part of document in to be able to submit.
-      $(document.body).append form
-      form.submit()
+    complete: () ->
+      window.open('/complete.html', '_self')
 
     #
     # Begin gameover countdown timer
@@ -727,6 +704,6 @@ game = new Vue
     beginCountdown: (t) ->
       $('.counter').text t
       if t==0
-        @submit()
+        @lost()
       else
         _.delay @beginCountdown, 1000, t-1

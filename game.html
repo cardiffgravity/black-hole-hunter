@@ -368,21 +368,21 @@
               </div>
 
               <!-- Continue -->
-              <div id="continue" @click.stop="submit">
+              <div id="continue" @click.stop="nextLevel">
                 <div class="center">
                   <div>{{continueText}}</div>
                 </div>
               </div>
 
               <!-- Won -->
-              <div id="won" @click.stop="submit">
+              <div id="won" @click.stop="complete">
                 <div class="center">
                   <div>{{wonText}} ... <span class="counter"></span></div>
                 </div>
               </div>
 
               <!-- Lost -->
-              <div id="lost" @click.stop="submit">
+              <div id="lost" @click.stop="lost">
                 <div class="center">
                   <div>{{lostText}} ... <span class="counter"></span></div>
                 </div>
