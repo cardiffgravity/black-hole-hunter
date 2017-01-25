@@ -1,0 +1,506 @@
+{
+  "info78": {
+    "inclination": "90", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info82": {
+    "inclination": "0", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "5.0"
+  }, 
+  "info83": {
+    "inclination": "45", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "5.0"
+  }, 
+  "info80": {
+    "inclination": "45", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info65": {
+    "inclination": "45", 
+    "mass1": "50.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info64": {
+    "inclination": "0", 
+    "mass1": "50.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info84": {
+    "inclination": "90", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "5.0"
+  }, 
+  "info9": {
+    "inclination": "90", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }, 
+  "info8": {
+    "inclination": "45", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }, 
+  "info75": {
+    "inclination": "90", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }, 
+  "info79": {
+    "inclination": "0", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info1": {
+    "inclination": "0", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "10.0"
+  }, 
+  "info71": {
+    "inclination": "45", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "20.0"
+  }, 
+  "info3": {
+    "inclination": "90", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "10.0"
+  }, 
+  "info2": {
+    "inclination": "45", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "10.0"
+  }, 
+  "info5": {
+    "inclination": "45", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "20.0"
+  }, 
+  "info4": {
+    "inclination": "0", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "20.0"
+  }, 
+  "info7": {
+    "inclination": "0", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }, 
+  "info6": {
+    "inclination": "90", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "20.0"
+  }, 
+  "info11": {
+    "inclination": "45", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info10": {
+    "inclination": "0", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info13": {
+    "inclination": "0", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info12": {
+    "inclination": "90", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info15": {
+    "inclination": "90", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info14": {
+    "inclination": "45", 
+    "mass1": "10.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info17": {
+    "inclination": "45", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "10.0"
+  }, 
+  "info16": {
+    "inclination": "0", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "10.0"
+  }, 
+  "info19": {
+    "inclination": "0", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "1.4"
+  }, 
+  "info18": {
+    "inclination": "90", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "10.0"
+  }, 
+  "info31": {
+    "inclination": "0", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info30": {
+    "inclination": "90", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info37": {
+    "inclination": "0", 
+    "mass1": "20.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "20.0"
+  }, 
+  "info36": {
+    "inclination": "90", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "5.0"
+  }, 
+  "info35": {
+    "inclination": "45", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "5.0"
+  }, 
+  "info34": {
+    "inclination": "0", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "5.0"
+  }, 
+  "info74": {
+    "inclination": "45", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }, 
+  "info59": {
+    "inclination": "45", 
+    "mass1": "40.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info58": {
+    "inclination": "0", 
+    "mass1": "40.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info55": {
+    "inclination": "0", 
+    "mass1": "30.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info54": {
+    "inclination": "90", 
+    "mass1": "30.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info57": {
+    "inclination": "90", 
+    "mass1": "30.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info56": {
+    "inclination": "45", 
+    "mass1": "30.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info51": {
+    "inclination": "90", 
+    "mass1": "30.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }, 
+  "info50": {
+    "inclination": "45", 
+    "mass1": "30.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }, 
+  "info53": {
+    "inclination": "45", 
+    "mass1": "30.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info52": {
+    "inclination": "0", 
+    "mass1": "30.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info77": {
+    "inclination": "45", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info69": {
+    "inclination": "90", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "10.0"
+  }, 
+  "info76": {
+    "inclination": "0", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info49": {
+    "inclination": "0", 
+    "mass1": "30.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }, 
+  "info39": {
+    "inclination": "90", 
+    "mass1": "20.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "20.0"
+  }, 
+  "info60": {
+    "inclination": "90", 
+    "mass1": "40.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info70": {
+    "inclination": "0", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "20.0"
+  }, 
+  "info38": {
+    "inclination": "45", 
+    "mass1": "20.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "20.0"
+  }, 
+  "info61": {
+    "inclination": "0", 
+    "mass1": "40.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info73": {
+    "inclination": "0", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }, 
+  "info62": {
+    "inclination": "45", 
+    "mass1": "40.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info72": {
+    "inclination": "90", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "20.0"
+  }, 
+  "info81": {
+    "inclination": "90", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info63": {
+    "inclination": "90", 
+    "mass1": "40.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info28": {
+    "inclination": "0", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info29": {
+    "inclination": "45", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info67": {
+    "inclination": "0", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "10.0"
+  }, 
+  "info24": {
+    "inclination": "90", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "20.0"
+  }, 
+  "info25": {
+    "inclination": "0", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }, 
+  "info26": {
+    "inclination": "45", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }, 
+  "info27": {
+    "inclination": "90", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }, 
+  "info20": {
+    "inclination": "45", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "1.4"
+  }, 
+  "info21": {
+    "inclination": "90", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "1.4"
+  }, 
+  "info22": {
+    "inclination": "0", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "20.0"
+  }, 
+  "info23": {
+    "inclination": "45", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "20.0"
+  }, 
+  "info68": {
+    "inclination": "45", 
+    "mass1": "5.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "10.0"
+  }, 
+  "info33": {
+    "inclination": "90", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info66": {
+    "inclination": "90", 
+    "mass1": "50.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info48": {
+    "inclination": "90", 
+    "mass1": "20.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info32": {
+    "inclination": "45", 
+    "mass1": "1.4", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info46": {
+    "inclination": "0", 
+    "mass1": "20.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info47": {
+    "inclination": "45", 
+    "mass1": "20.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "50.0"
+  }, 
+  "info44": {
+    "inclination": "45", 
+    "mass1": "20.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info45": {
+    "inclination": "90", 
+    "mass1": "20.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info42": {
+    "inclination": "90", 
+    "mass1": "20.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }, 
+  "info43": {
+    "inclination": "0", 
+    "mass1": "20.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "40.0"
+  }, 
+  "info40": {
+    "inclination": "0", 
+    "mass1": "20.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }, 
+  "info41": {
+    "inclination": "45", 
+    "mass1": "20.0", 
+    "system": "Compact Binary Coalescence", 
+    "mass2": "30.0"
+  }
+}
