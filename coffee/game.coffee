@@ -428,24 +428,6 @@ visibleWave = () ->
   GLOBAL_WAVES[waveID]['wave']
 
 #
-# Begin gameover countdown timer
-#
-# When the user has lost all their lives beginCountdown(t) will populate the
-# `GAME OVER ... {1:d}` with an integer counting down from t. At the end of
-# the countdown the function will trigger the `submit` action if the button
-# has not already been pressed.
-#
-# @param  {int} t Starting countdown value
-# @return {undefined}
-#
-beginCountdown = (t) ->
-  $('.counter').text t
-  if t==0
-    GLOBAL_ACTIONS['submit']()
-  else
-    _.delay beginCountdown, 1000, t-1
-
-#
 # Carousel
 #
 # The default Boostrap carousel is great, but I do not want to give it a fixed
@@ -644,7 +626,7 @@ game = new Vue
       $('#wave-players').removeClass().addClass('dim-100-20')
       $('#check-preloader').removeClass().addClass('light-0-100')
 
-      _.delay( (waveID) ->
+      _.delay( (waveID) =>
         # Check if visible data contains the signal
         if $('#'+waveID).data('signal') is 1
           # Show continue
@@ -667,22 +649,20 @@ game = new Vue
 
         # If not reduce the number of lives
         else
-          dialCol = $('#dial-col')
-          lives = dialCol.data('lives')
 
           # With one life lost of one life remaining remove abbility to check
-          if lives == 1
+          if @lives == 1
             $('#tick-noclick').hide()
             $('#lost').show()
-            beginCountdown(5)
+            @beginCountdown(5)
           else
             # Toggle tick
             $('#tick-noclick').hide()
             $('#tick').show()
 
           # Render new number of lives
-          dialCol.data('lives', (lives-1))
-          renderLives(lives-1)
+          @lives -= 1
+          renderLives(@lives)
 
           # Show incorrect preloader
           $('#check-preloader').removeClass().addClass('dim-100-0')
@@ -732,3 +712,21 @@ game = new Vue
       # Form needs to be a part of document in to be able to submit.
       $(document.body).append form
       form.submit()
+
+    #
+    # Begin gameover countdown timer
+    #
+    # When the user has lost all their lives beginCountdown(t) will populate the
+    # `GAME OVER ... {1:d}` with an integer counting down from t. At the end of
+    # the countdown the function will trigger the `submit` action if the button
+    # has not already been pressed.
+    #
+    # @param  {int} t Starting countdown value
+    # @return {undefined}
+    #
+    beginCountdown: (t) ->
+      $('.counter').text t
+      if t==0
+        @submit()
+      else
+        _.delay @beginCountdown, 1000, t-1
