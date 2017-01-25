@@ -534,18 +534,18 @@ game = new Vue
       mass1: 10
       mass2: 10
       inclination: 90
-    signalSrc: "signalBank/sigbank39/hplus.mp3"
+    signalSrc: ""
     ob1:
-      src: "signalBank/sigbank24/noise.mp3"
+      src: ""
       signal: 0
     ob2:
-      src: "signalBank/sigbank39/data2.mp3"
-      signal: 1
+      src: ""
+      signal: 0
     ob3:
-      src: "signalBank/sigbank50/noise.mp3"
+      src: ""
       signal: 0
     ob4:
-      src: "signalBank/sigbank72/noise.mp3"
+      src: ""
       signal: 0
 
   computed:
@@ -575,6 +575,25 @@ game = new Vue
     massText: () -> @locs[@loc].game.main['mass-text']
     inclinationText: () -> @locs[@loc].game.main['inclination-text']
 
+  created: () ->
+    # Generate paths to random noise waveforms
+    sigBankIDs = (Math.floor(84*Math.random() + 1) for i in [0...4])
+    for i in [0..3]
+      @["ob#{i+1}"].src = "signalBank/sigbank#{sigBankIDs[i]}/noise.mp3"
+
+    # Choose waveform that will contain a signal
+    sigLoc = Math.floor 4*Math.random()
+    sigID = sigBankIDs[sigLoc]
+    @["ob#{sigLoc+1}"].src = "signalBank/sigbank#{sigID}/data#{@level}.mp3"
+    @["ob#{sigLoc+1}"].signal = 1
+    @signalSrc = "signalBank/sigbank#{sigID}/hplus.mp3"
+
+    # Prepare signal metadata
+    metadata = require "../signalBank.json"
+    @info.mass1 = metadata["info#{sigID}"].mass1
+    @info.mass2 = metadata["info#{sigID}"].mass2
+    @info.inclination = metadata["info#{sigID}"].inclination
+
   mounted: () ->
     setRenderLives()
     addWaveforms()
@@ -585,7 +604,6 @@ game = new Vue
 
   methods:
     play: () ->
-      console.log "hello, world"
       visibleWave().play()
 
     pause: () ->
@@ -625,7 +643,6 @@ game = new Vue
 
       _.delay( (waveID) ->
         # Check if visible data contains the signal
-        console.log $('#'+waveID).data('signal')
         if $('#'+waveID).data('signal') is 1
           # Show continue
           $('#tick-noclick').hide()
