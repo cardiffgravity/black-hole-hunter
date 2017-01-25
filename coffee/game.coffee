@@ -633,7 +633,7 @@ game = new Vue
           $('#tick-noclick').hide()
           if $('#dial-col').data('max-level') == $('#dial-col').data('level')
             $('#won').show()
-            beginCountdown(5)
+            beginWonCountdown(5)
           else
             $('#continue').show()
 
@@ -654,7 +654,7 @@ game = new Vue
           if @lives == 1
             $('#tick-noclick').hide()
             $('#lost').show()
-            @beginCountdown(5)
+            @beginLostCountdown(5)
           else
             # Toggle tick
             $('#tick-noclick').hide()
@@ -687,13 +687,9 @@ game = new Vue
       window.open('/game.html', '_self')
 
     lost: () ->
-      setCookie('lives', 3)
-      setCookie('level', 1)
       window.open('/lost.html', '_self')
 
     complete: () ->
-      setCookie('lives', 3)
-      setCookie('level', 1)
       window.open('/complete.html', '_self')
 
     #
@@ -707,9 +703,22 @@ game = new Vue
     # @param  {int} t Starting countdown value
     # @return {undefined}
     #
-    beginCountdown: (t) ->
+    beginLostCountdown: (t) ->
+      setCookie('lives', 3)
+      setCookie('level', 1)
+
       $('.counter').text t
       if t==0
         @lost()
       else
-        _.delay @beginCountdown, 1000, t-1
+        _.delay @beginLostCountdown, 1000, t-1
+
+    beginWonCountdown: (t) ->
+      setCookie('lives', 3)
+      setCookie('level', 1)
+
+      $('.counter').text t
+      if t==0
+        @complete()
+      else
+        _.delay @beginWonCountdown, 1000, t-1
