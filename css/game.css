@@ -1,0 +1,584 @@
+/*
+ * Info
+ */
+
+/*
+ * `display: flex` destroys bootstraps column wrapping. We only need column
+ * wrapping on extra small devices (col-xs-* == <768px) and thats exactly when
+ * we don't need vertical centering, so we use a CSS3 media query to condition
+ * on this.
+ */
+@media (min-width: 768px) {
+  #info {
+    display: flex;
+    align-items: center;
+  }
+}
+
+#dial-col {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 12em;
+}
+
+#dial-col > #dial {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#dial-col > #level {
+  font-family: 'Lato', 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,1.0);
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  cursor: default;
+}
+#dial-col > #lives {
+  color: rgb(255, 165, 0);
+  font-size: 1.8em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  cursor: default;
+  white-space: nowrap;
+}
+
+#dial-col > #dial-highlight {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  z-index: -333;
+}
+
+#console-col {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+#console {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: solid 1px rgba(255,255,255,0.40);
+  padding: 15px;
+  font-size: 1em;
+  color: white;
+}
+
+#question {
+  width: 84%;
+  margin-left: 8%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#quote-text {
+  margin-bottom: 0.7em;
+}
+
+#quote-link > a {
+  text-decoration: none;
+  color: rgba(51,122,183,1.0);
+  font-weight: 700;
+}
+
+#quote-link > a:active,
+#quote-link > a:focus,
+#quote-link > a:hover {
+  text-decoration: none;
+  color: rgba(51,122,183,1.0);
+}
+
+/**
+ * Info::Lives
+ */
+
+#dial-highlight{
+  transition: box-shadow 250ms ease-in-out;
+  transition: background-color 250ms ease-in-out;
+}
+
+.bs-in {
+  box-shadow: 0 0 40px rgba(220,20,60,0.5);
+  background-color: rgba(220,20,60,0.5);
+}
+
+.bs-out {
+  box-shadow: 0 0 40px rgba(220,20,60,0.0);
+  background-color: rgba(220,20,60,0.0);
+}
+
+/**
+ * Info::tutorial
+ */
+
+#tut-carousel .item > div {
+  width: 84%;
+  margin-left: 8%;
+  margin-top: 10px;
+}
+
+/*
+ * .active Currently active item
+ * .prev Activating item that lies to the left
+ * .next Activating item that lies to the right
+ *
+ * id's are specified to ensure these achive higher specificity then bootstraps
+ * default's which style as display: block. This style vertically centers the
+ * immediate children of the item's.
+ */
+#tut-intro.active, #tut-intro.prev, #tut-intro.next,
+#tut-signal.active, #tut-signal.prev, #tut-signal.next,
+#tut-ob.active, #tut-ob.prev, #tut-ob.next,
+#tut-check.active, #tut-check.prev, #tut-check.next {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+  width: 5%;
+}
+
+/*
+ * With position: relative and placed below .carousel-inner in the source, this
+ * will ensure that the .carousel-indicators do not overlay and of the items in
+ * .carousel-inner and simply appear below it and register as an item that
+ * adds to the height wrt its parent.
+ */
+.carousel-indicators {
+  bottom: 0;
+  margin-bottom: 0;
+  margin-top: 10px;
+  margin-left: 0;
+  width: 100%;
+  position: relative;
+  left: 0;
+}
+
+.thumb-tut, .thumb-tut-stack {
+  cursor: default;
+}
+
+.abs-1, .abs-2, .abs-3, .abs-4 {
+  width: 70%;
+  position: absolute;
+}
+
+.abs-1 {
+  top: 30px;
+  left: 25%;
+  opacity: 1.0;
+}
+
+.abs-2 {
+  top: 20px;
+  left: 20%;
+  opacity: 0.25;
+}
+
+.abs-3 {
+  top: 10px;
+  left: 15%;
+  opacity: 0.25;
+}
+
+.abs-4 {
+  top: 0px;
+  left: 10%;
+  opacity: 0.25;
+}
+
+#tut-carousel .item.render {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+}
+
+#tut-check > .row {
+  display: flex;
+  align-items: center;
+}
+
+#tut-carousel #tut-check > .row > div:first-child {
+  text-align: center;
+}
+
+#tut-tick {
+  font-size: 4em;
+  color: rgba(173,255,47,1.0);
+}
+
+.tut-title, #question-title {
+  font-weight: 700;
+  margin-bottom: 0.6em;
+}
+
+#tut-lives {
+  font-size: 3em;
+  position: relative;
+  letter-spacing: -0.15em;
+  white-space: nowrap;
+}
+
+#tut-lives > div {
+  font-size: 1px;
+  width: 20em;
+  height: 20em;
+  background-color: rgba(255, 165, 0, 1.0);
+  border: 2px solid rgba(255, 165, 0, 1.0);
+  border-radius: 20em;
+  display: inline-block;
+}
+
+/*
+ * Animate lives indicator on Info::Tutorial::Item 4
+ * [source](http://stackoverflow.com/questions/23985018/simple-css-animation-loop-fading-in-out-loading-text/23985078#23985078)
+ */
+
+@keyframes cycleOpacity {
+  0%   { background-color: rgba(255, 165, 0, 1.0); }
+  50%  { background-color: rgba(255, 165, 0, 0.0); }
+  100% { background-color: rgba(255, 165, 0, 1.0); }
+}
+
+@-o-keyframes cycleOpacity {
+  0%   { background-color: rgba(255, 165, 0, 1.0); }
+  50%  { background-color: rgba(255, 165, 0, 0.0); }
+  100% { background-color: rgba(255, 165, 0, 1.0); }
+}
+
+@-moz-keyframes cycleOpacity {
+  0%   { background-color: rgba(255, 165, 0, 1.0); }
+  50%  { background-color: rgba(255, 165, 0, 0.0); }
+  100% { background-color: rgba(255, 165, 0, 1.0); }
+}
+
+@-webkit-keyframes cycleOpacity {
+  0%   { background-color: rgba(255, 165, 0, 1.0); }
+  50%  { background-color: rgba(255, 165, 0, 0.0); }
+  100% { background-color: rgba(255, 165, 0, 1.0); }
+}
+
+#tut-lives-3 {
+  -webkit-animation: cycleOpacity 2500ms infinite;
+  -moz-animation: cycleOpacity 2500ms infinite;
+  -o-animation: cycleOpacity 2500ms infinite;
+  animation: cycleOpacity 2500ms infinite;
+}
+
+/**
+ * Game
+ */
+#game {
+  height: 30em;
+}
+
+/**
+ * Game::Thumbnails
+ */
+
+.thumb-container {
+  height: 6em;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.thumb, .thumb-tut, .thumb-tut-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  border: solid 1px rgba(255,255,255,0.40);
+  cursor: pointer;
+}
+
+.thumb-title, .thumb-title-tut, .thumb-title-tut-stack {
+  font-size: 0.6em;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,1.0);
+  border-bottom: solid 1px rgba(255,255,255,0.40);
+  padding: 4px;
+}
+
+.thumb-wave, .thumb-wave-tut {
+  width: 90%;
+  margin-left: 5%;
+}
+
+/**
+ * Game::Info
+ */
+
+#wave-signal-info {
+  position: absolute;
+  font-size: 0.7em;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,1.0);
+  margin-left: 1.5em;
+  margin-top: 1.5em;
+  z-index: 666;
+}
+
+#wave-signal-info > div {
+  margin-bottom: 0.5em;
+}
+
+/**
+ * Game::Player
+ */
+
+#wave-player-col > div.row {
+  height: 30em;
+}
+
+#wave-player-container {
+  height: 88%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+#wave-player-container-paddless {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: solid 1px rgba(238,238,238,0.5);
+}
+
+.wave-player {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+#grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#wave-player-controls-container {
+  height: 12%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+#wave-player-controls {
+  position: relative;
+  height: 100%;
+  border: solid 1px rgba(238,238,238,0.5);
+  color: white;
+  font-size: 16px;
+}
+
+/**
+ * Game::Preloaders
+ */
+
+ #preloaders {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: 333;
+   pointer-events: none;
+ }
+
+ #check-preloader, #correct-preloader, #incorrect-preloader {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+ }
+
+/**
+ * Game::Preloaders::Transitions
+ */
+#wave-players, #check-preloader, #correct-preloader, #incorrect-preloader {
+  transition: opacity 250ms ease-in-out;
+}
+
+.dim-100-20 {
+  opacity: 0.15;
+}
+
+.dim-100-0 {
+  opacity: 0;
+}
+
+.light-20-100, .light-0-100  {
+  opacity: 1;
+}
+
+/**
+ * Game::Preloaders::Check
+ */
+
+#check-preloader > div, #correct-preloader > div, #incorrect-preloader > div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#check-title, .preloader-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  letter-spacing: 0.5em;
+  color: #eeeeee;
+  white-space: nowrap;
+}
+
+#check-animation {
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+}
+
+#check-svg {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+}
+
+#check-path {
+  animation: moveTheWave 5000ms linear infinite;
+}
+
+@keyframes moveTheWave {
+  0% {transform: translate3d(0, 0, 0);}
+  100% {transform: translate3d(-300px, 0, 0);}
+}
+
+/**
+ * Game::Preloaders::Correct
+ */
+
+#correct-preloader .fa-check-circle {
+  font-size: 10em;
+  color: rgba(173,255,47,1.0);
+}
+
+ /**
+  * Game::Preloaders::Incorrect
+  */
+
+#incorrect-preloader .fa-times-circle {
+  font-size: 10em;
+  color: rgba(220,20,60,1.0);
+}
+
+/**
+ * Game::Navigation
+ */
+
+#navigation {
+  position: absolute;
+  left:2%;
+  top:50%;
+  transform: translate(0, -50%);
+}
+
+#check {
+  position: absolute;
+  right:2%;
+  top:50%;
+  transform: translate(0, -50%);
+  display: none;
+}
+
+#tick {
+  color: rgba(173,255,47,1.0);
+}
+
+#tick-noclick {
+  color: rgba(173,255,47,0.5);
+  display: none;
+}
+
+#continue, #won, #lost {
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  position: absolute;
+  height: 100%;
+  box-sizing: content-box;
+  right:0;
+  margin-top: -1px;
+  margin-right: -1px;
+  padding: 0 10px;
+  display: none;
+}
+
+#continue, #won {
+  color: rgba(173,255,47,1.0);
+  border: 1px solid rgba(173,255,47,1.0);
+}
+
+#lost {
+  color: rgba(220,20,60,1.0);
+  border: 1px solid rgba(220,20,60,1.0);
+}
+
+/* This extra container is so that I don't have to display:flex toggle in js*/
+#continue > .center, #won > .center, #lost > .center {
+  height: 100%;
+  display:flex;
+  align-items:center;
+}
+
+#play, #pause, #tick, #repeat, #continue, #won, #lost {
+  cursor: pointer;
+}
+
+#wave-signal-info {
+  cursor: help;
+}
+
+/**
+ * Tooltips
+ */
+
+ .tooltip-inner {
+   background-color: #eeeeee;
+   color: rgb(6,6,27);
+   padding: 8px;
+ }
+ .tooltip.in {
+   opacity: 0.9;
+ }
+ .tooltip.top .tooltip-arrow {
+   border-top-color: #eeeeee;
+ }
+ .tooltip.right .tooltip-arrow {
+   border-right-color: #eeeeee;
+ }
+ .tooltip.bottom .tooltip-arrow {
+   border-bottom-color: #eeeeee;
+ }
+ .tooltip.bottom-right .tooltip-arrow {
+   border-bottom-color: #eeeeee;
+ }
+
+/**
+ * Footer
+ */
+
+#footer {
+  height: 2em;
+}

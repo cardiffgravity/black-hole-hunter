@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Identification -->
+  <title>Black Hole Hunter</title>
+  <link rel="shortcut icon" href="../img/cardiff.ico" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <!-- Load fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,900italic,100italic,300,400italic,300italic,700,700italic,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Load site css -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/game.css">
+
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div id="header" class="row">
+      <div class="col-xs-12">
+        <div id="title">
+          <a href="http://www.blackholehunter.org/" target="_blank">
+            BLACK HOLE HUNTER
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div id="info" class="row">
+
+      <!-- Dial -->
+      <div
+        id="dial-col"
+        class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1"
+        :data-level="level"
+        :data-max-level="maxLevel"
+        :data-lives="lives"
+        :data-max-lives="maxLives">
+        <canvas id="dial"></canvas>
+        <div id="level">{{levelText}}</div>
+        <div id="lives" class="ts-out"></div>
+        <div id="dial-highlight" class="bs-out"></div>
+      </div>
+
+      <!-- Console -->
+      <div id="console-col" class="col-xs-12 col-sm-9 col-md-8">
+        <div id="console">
+          <!-- Factual quotes -->
+          <div id="question" v-if="level > 1">
+            <div id="question-title">{{quote.title}}</div>
+            <div id="quote-text">{{quote.text}}</div>
+            <div id="quote-link" v-if="quote.link != ''">
+              <a :href="quote.link" target="_blank">{{quote.linkText}} ...</a>
+            </div>
+          </div>
+
+          <!-- Tutorial -->
+          <div id="tut-carousel" class="carousel slide" data-interval="false" v-else>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+              <!-- Item 1 -->
+              <div id="tut-intro" class="item active">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="tut-title">{{tutorial.title1}}</div>
+                    <div class="tut-text">{{tutorial.text1}}</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div id="tut-signal" class="item render">
+                <div class="row">
+
+                  <!-- Thumbnail -->
+                  <div class="thumb-container col-xs-4">
+                    <div id="thumb-tut" class="thumb-tut" data-target="wave-signal">
+                      <div class="thumb-title-tut">
+                        {{signalText}}
+                      </div>
+                      <div id="thumb-wave-tut" class="thumb-wave-tut"></div>
+                    </div>
+                  </div>
+
+                  <!-- Tutorial text -->
+                  <div class="col-xs-8">
+                    <div class="tut-title">1. {{tutorial.title2}}</div>
+                    <div class="tut-text">{{tutorial.text2}}</div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div id="tut-ob" class="item render">
+                <div class="row">
+
+                  <!-- Thumbnails -->
+                  <div class="col-xs-4">
+                    <div class="thumb-container abs-1">
+                      <div class="thumb-tut-stack" data-target="wave-ob1">
+                        <div class="thumb-title-tut-stack">
+                          {{dataText}} 1
+                        </div>
+                        <div id="thumb-wave-ob1-tut" class="thumb-wave-tut-stack"></div>
+                      </div>
+                    </div>
+                    <div class="thumb-container abs-2">
+                      <div class="thumb-tut-stack" data-target="wave-ob2">
+                        <div class="thumb-title-tut-stack">
+                          {{dataText}} 2
+                        </div>
+                        <div id="thumb-wave-ob2-tut" class="thumb-wave-tut-stack"></div>
+                      </div>
+                    </div>
+                    <div class="thumb-container abs-3">
+                      <div class="thumb-tut-stack" data-target="wave-ob3">
+                        <div class="thumb-title-tut-stack">
+                          {{dataText}} 3
+                        </div>
+                        <div id="thumb-wave-ob3-tut" class="thumb-wave-tut-stack"></div>
+                      </div>
+                    </div>
+                    <div class="thumb-container abs-4">
+                      <div class="thumb-tut-stack" data-target="wave-ob4">
+                        <div class="thumb-title-tut-stack">
+                          {{dataText}} 4
+                        </div>
+                        <div id="thumb-wave-ob4-tut" class="thumb-wave-tut-stack"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tutorial text -->
+                  <div class="col-xs-8">
+                    <div class="tut-title">2. {{tutorial.title3}}</div>
+                    <div class="tut-text">{{tutorial.text3}}</div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div id="tut-check" class="item">
+                <div class="row">
+                  <div class="col-xs-3">
+                    <div id="tut-tick">
+                      <span class="glyphicon glyphicon-ok" data-action="check"></span>
+                    </div>
+                    <div id="tut-lives">
+                      <div id="tut-lives-1"></div>
+                      <div id="tut-lives-2"></div>
+                      <div id="tut-lives-3"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-9">
+                    <div class="tut-title">3. {{tutorial.title4}}</div>
+                    <div class="tut-text">{{tutorial.text4}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#tut-carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#tut-carousel" data-slide-to="1"></li>
+              <li data-target="#tut-carousel" data-slide-to="2"></li>
+              <li data-target="#tut-carousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#tut-carousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            </a>
+            <a class="right carousel-control" href="#tut-carousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Game -->
+    <div id="game" class="row">
+
+      <!-- Selector -->
+      <div id="wave-selector-col" class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1">
+        <div class="row">
+          <div class="thumb-container col-xs-4 col-sm-12">
+            <div id="thumb-signal" class="thumb" @click.stop="display" data-target="wave-signal">
+              <div class="thumb-title">
+                {{signalText}}
+              </div>
+              <div id="thumb-wave-signal" class="thumb-wave"></div>
+            </div>
+          </div>
+          <div class="thumb-container col-xs-2 col-sm-12">
+            <div id="thumb-ob1" class="thumb" @click.stop="display" data-target="wave-ob1">
+              <div class="thumb-title">
+                {{dataText}} 1
+              </div>
+              <div id="thumb-wave-ob1" class="thumb-wave"></div>
+            </div>
+          </div>
+          <div class="thumb-container col-xs-2 col-sm-12">
+            <div id="thumb-ob2" class="thumb" @click.stop="display" data-target="wave-ob2">
+              <div class="thumb-title">
+                {{dataText}} 2
+              </div>
+              <div id="thumb-wave-ob2" class="thumb-wave"></div>
+            </div>
+          </div>
+          <div class="thumb-container col-xs-2 col-sm-12">
+            <div id="thumb-ob3" class="thumb" @click.stop="display" data-target="wave-ob3">
+              <div class="thumb-title">
+                {{dataText}} 3
+              </div>
+              <div id="thumb-wave-ob3" class="thumb-wave"></div>
+            </div>
+          </div>
+          <div class="thumb-container col-xs-2 col-sm-12">
+            <div id="thumb-ob4" class="thumb" @click.stop="display" data-target="wave-ob4">
+              <div class="thumb-title">
+                {{dataText}} 4
+              </div>
+              <div id="thumb-wave-ob4" class="thumb-wave"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Player -->
+      <div id="wave-player-col" class="col-xs-12 col-sm-9 col-md-8">
+        <div class="row">
+          <div id="wave-player-container" class="col-xs-12">
+            <div id="wave-player-container-paddless"> <!-- http://stackoverflow.com/questions/17115344/absolute-positioning-ignoring-padding-of-parent/30826028#30826028 -->
+
+              <!-- Wave Players -->
+              <div id="wave-players" class="light-20-100">
+
+                <!-- Info -->
+                <div id="wave-signal-info" data-toggle="tooltip" data-original-title="
+                  The signal depends on the masses of the black holes given
+                  here relative to the mass of the sun, and inclination angle of
+                  its orbital plane.
+                ">
+                  <div id="mass-1">
+                    {{massText}} 1 = {{info.mass1}} M<sub>&#9737;</sub>
+                  </div>
+                  <div id="mass-2">
+                    {{massText}} 2 = {{info.mass2}} M<sub>&#9737;</sub>
+                  </div>
+                  <div id="inclination">
+                    {{inclinationText}} = {{info.inclination}}&#176;
+                  </div>
+                </div>
+
+                <!-- Ticks -->
+                <canvas id="grid"></canvas>
+
+                <!-- Signal -->
+                <div
+                  id="wave-signal"
+                  class="wave-player"
+                  :data-src="signalSrc"
+                  :data-mass-1="info.mass1"
+                  :data-mass-2="info.mass2"
+                  :data-inclination="info.inclination"></div>
+
+                <!-- Datas -->
+                <div
+                  id="wave-ob1"
+                  class="wave-player"
+                  :data-src="ob1.src"
+                  :data-signal="ob1.signal"></div>
+                <div
+                  id="wave-ob2"
+                  class="wave-player"
+                  :data-src="ob2.src"
+                  :data-signal="ob2.signal"></div>
+                <div
+                  id="wave-ob3"
+                  class="wave-player"
+                  :data-src="ob3.src"
+                  :data-signal="ob3.signal"></div>
+                <div
+                  id="wave-ob4"
+                  class="wave-player"
+                  :data-src="ob4.src"
+                  :data-signal="ob4.signal"></div>
+
+              </div>
+
+              <!-- Preloaders -->
+              <div id="preloaders">
+
+                <!-- Intial Check -->
+                <div id="check-preloader" class="dim-100-0">
+                  <div>
+                    <div id="check-title">{{checkText}}</div>
+                    <div id="check-animation">
+                      <svg id="check-svg" xmlns="http://www.w3.org/2000/svg">
+                        <path id="check-path" fill="none" stroke="#eeeeee" stroke-width="2" stroke-linecap="round">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Correct -->
+                <div id="correct-preloader" class="dim-100-0">
+                  <div>
+                    <div class="preloader-title">{{correctText}}</div>
+                    <div class="preloader-glyph">
+                      <i class="fa fa-check-circle"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Incorrect -->
+                <div id="incorrect-preloader" class="dim-100-0">
+                  <div>
+                    <div class="preloader-title">{{incorrectText}}</div>
+                    <div class="preloader-glyph">
+                      <i class="fa fa-times-circle"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Player controls -->
+          <div id="wave-player-controls-container" class="col-xs-12">
+            <div id="wave-player-controls">
+
+              <!-- Navigation -->
+              <div id="navigation">
+                <span id="play" class="glyphicon glyphicon-play" @click.stop="play"></span>
+                &nbsp;
+                <span id="pause" class="glyphicon glyphicon-pause" @click.stop="pause"></span>
+                &nbsp;
+                <span id="repeat" class="glyphicon glyphicon-repeat" @click.stop="repeat"></span>
+              </div>
+
+              <!-- Check -->
+              <div id="check">
+                <span id="tick" class="glyphicon glyphicon-ok" @click.stop="check"></span>
+                <span id="tick-noclick" class="glyphicon glyphicon-ok"></span>
+              </div>
+
+              <!-- Continue -->
+              <div id="continue" @click.stop="submit">
+                <div class="center">
+                  <div>{{continueText}}</div>
+                </div>
+              </div>
+
+              <!-- Won -->
+              <div id="won" @click.stop="submit">
+                <div class="center">
+                  <div>{{wonText}} ... <span class="counter"></span></div>
+                </div>
+              </div>
+
+              <!-- Lost -->
+              <div id="lost" @click.stop="submit">
+                <div class="center">
+                  <div>{{lostText}} ... <span class="counter"></span></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer" class="row">
+      <div class="col-xs-12">
+      </div>
+    </div>
+
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://cdn.rawgit.com/Galadirith/wavesurfer.js/9f31c0a279b2c5f133873f97b0ec0f9faffd3395/dist/wavesurfer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src='https://unpkg.com/vue/dist/vue.js'></script>
+<script src="../js/game.js"></script>
+
+</body>
+</html>
