@@ -34,7 +34,7 @@ setCookie = (cname, cvalue) ->
   expires = "expires="+date.toGMTString()+";"
 
   # Set cookie
-  document.cookie = cookie+expires+"path=/;"
+  document.cookie = cookie+expires+"path=/game.html;"
 
 #
 # Generate level dial structure
@@ -682,12 +682,18 @@ game = new Vue
       , 1200, visibleWaveID())
 
     nextLevel: () ->
+      setCookie('lives', @lives)
+      setCookie('level', @level+1)
       window.open('/game.html', '_self')
 
     lost: () ->
+      setCookie('lives', 3)
+      setCookie('level', 1)
       window.open('/lost.html', '_self')
 
     complete: () ->
+      setCookie('lives', 3)
+      setCookie('level', 1)
       window.open('/complete.html', '_self')
 
     #
