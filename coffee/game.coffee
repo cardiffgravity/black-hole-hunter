@@ -529,7 +529,7 @@ game = new Vue
     maxLevel: 7
     lives: 3
     maxLives: 3
-    questionNumber: 5
+    quoteNumber: 1
     info:
       mass1: 10
       mass2: 10
@@ -561,8 +561,8 @@ game = new Vue
       text4: @locs[@loc].tutorial['level-1']['text-4']
     quote: () ->
       title: @locs[@loc].quotes.main['title']
-      text: @locs[@loc].quotes["quote#{@questionNumber}"]['quote']
-      link: @locs[@loc].quotes["quote#{@questionNumber}"]['weblink']
+      text: @locs[@loc].quotes["quote#{@quoteNumber}"]['quote']
+      link: @locs[@loc].quotes["quote#{@quoteNumber}"]['weblink']
       linkText: @locs[@loc].quotes.main['weblink-text']
     signalText: () -> @locs[@loc].game.main['signal-text']
     dataText: () -> @locs[@loc].game.main['data-text']
@@ -593,6 +593,9 @@ game = new Vue
     @info.mass1 = metadata["info#{sigID}"].mass1
     @info.mass2 = metadata["info#{sigID}"].mass2
     @info.inclination = metadata["info#{sigID}"].inclination
+
+    # Chose random quote
+    @quoteNumber = Math.floor(32*Math.random() + 1)
 
   mounted: () ->
     setRenderLives()
