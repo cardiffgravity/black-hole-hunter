@@ -525,9 +525,9 @@ game = new Vue
   data:
     locs: require('../locs.json')
     loc: getCookie('loc') or 'en'
-    level: 4
+    level: Number(getCookie('level')) or 1
     maxLevel: 7
-    lives: 3
+    lives: Number(getCookie('lives')) or 3
     maxLives: 3
     quoteNumber: 1
     info:

@@ -16,11 +16,35 @@ getCookie = (cname) ->
         return c.substring(name.length,c.length) if c.indexOf(name) is 0
     return ''
 
+#
+# Get a cookie's value
+#
+# [W3Schools](http://www.w3schools.com/js/js_cookies.asp)
+#
+# @param  {string} cname Cookie name/key
+# @param  {string} cvalue Cookie value
+#
+setCookie = (cname, cvalue) ->
+  # Compile cookie string
+  cookie = "#{cname}=#{cvalue};"
+
+  # Compile expiration string for 30 days
+  date = new Date()
+  date.setTime date.getTime()+(30*24*60*60*1000)
+  expires = "expires="+date.toGMTString()+";"
+
+  # Set cookie
+  document.cookie = cookie+expires+"path=/game.html;"
+
 splash = new Vue
   el: '#splash'
 
   data:
     locs: require('../locs.json')
+
+  created: () ->
+    setCookie('level', 1)
+    setCookie('lives', 3)
 
   mounted: () ->
       locCookie = getCookie('loc') or 'en'
