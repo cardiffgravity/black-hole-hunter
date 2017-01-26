@@ -5,6 +5,8 @@ module.exports = {
     entry: {
         splash: './coffee/splash.coffee',
         game: './coffee/game.coffee',
+        lost: './coffee/lost.coffee',
+        complete: './coffee/complete.coffee'
     },
     output: {
         path: __dirname,
