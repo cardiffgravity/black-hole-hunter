@@ -1,19 +1,18 @@
 {
-  "name": "spectrum",
+  "name": "black-hole-hunter",
   "version": "0.1.0",
-  "description": "Move to find gravitational waves",
-  "main": "/js/index.js",
+  "description": "Listen to find gravitational waves",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack-production.config.js",
+    "dev": "webpack-dev-server --open --inline"
   },
   "author": "Edward Fauchon-Jones",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Galadirith/spectrum.git"
+    "url": "git+https://github.com/Galadirith/black-hole-hunter.git"
   },
   "keywords": [
-    "spectrum",
     "gravitational",
     "wave",
     "waveform",
@@ -22,9 +21,9 @@
     "outreach"
   ],
   "bugs": {
-    "url": "https://github.com/Galadirith/spectrum/issues"
+    "url": "https://github.com/Galadirith/black-hole-hunter/issues"
   },
-  "homepage": "https://github.com/Galadirith/spectrum#readme",
+  "homepage": "https://github.com/Galadirith/black-hole-hunter",
   "devDependencies": {
     "coffee-loader": "^0.7.2",
     "coffee-script": "^1.12.3",
