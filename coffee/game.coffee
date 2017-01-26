@@ -633,7 +633,7 @@ game = new Vue
           $('#tick-noclick').hide()
           if $('#dial-col').data('max-level') == $('#dial-col').data('level')
             $('#won').show()
-            beginWonCountdown(5)
+            @beginWonCountdown(5)
           else
             $('#continue').show()
 
