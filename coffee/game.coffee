@@ -684,13 +684,13 @@ game = new Vue
     nextLevel: () ->
       setCookie('lives', @lives)
       setCookie('level', @level+1)
-      window.open('/game.html', '_self')
+      window.open('./game.html', '_self')
 
     lost: () ->
-      window.open('/lost.html', '_self')
+      window.open('./lost.html', '_self')
 
     complete: () ->
-      window.open('/complete.html', '_self')
+      window.open('./complete.html', '_self')
 
     #
     # Begin gameover countdown timer
