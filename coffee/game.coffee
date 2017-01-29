@@ -586,6 +586,11 @@ game = new Vue
     carouselNormalization()
     addCheckPreloader()
     addTooltips()
+    
+    locCookie = getCookie('loc') or 'en'
+    $('[data-loc-sel="'+locCookie+'"]').addClass('active')
+    $('[data-loc="'+locCookie+'"]').addClass('active')
+    $('#play-now-loc').attr 'value', locCookie
 
   methods:
     play: () ->
@@ -722,3 +727,31 @@ game = new Vue
         @complete()
       else
         _.delay @beginWonCountdown, 1000, t-1
+
+    selectLoc: (e) ->
+      target = $(e.currentTarget)
+
+      # Get localization value
+      locVal = target.data 'loc-sel'
+      @loc = locVal
+      loc = "loc="+locVal+";"
+
+      # Compile expiration string for 30 days
+      date = new Date()
+      date.setTime date.getTime()+(30*24*60*60*1000)
+      expires = "expires="+date.toGMTString()+";"
+
+      # Set cookie
+      document.cookie = loc+expires+"path=/;"
+
+      # Set selector styles
+      $('[data-loc-sel]').removeClass()
+      $('[data-loc-sel="'+locVal+'"]').addClass('active')
+
+      # Set display styles
+      $('[data-loc]').removeClass()
+      $('[data-loc='+locVal+']').addClass('active')
+
+      # Set form value for cgi
+      locCookie = getCookie('loc') or 'en'
+      $('#play-now-loc').attr 'value', locCookie
