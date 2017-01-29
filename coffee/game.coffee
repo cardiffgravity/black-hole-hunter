@@ -34,7 +34,7 @@ setCookie = (cname, cvalue) ->
   expires = "expires="+date.toGMTString()+";"
 
   # Set cookie
-  document.cookie = cookie+expires+"path=/game.html;"
+  document.cookie = cookie+expires
 
 #
 # Generate level dial structure
