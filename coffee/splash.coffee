@@ -51,7 +51,6 @@ splash = new Vue
       $('[data-loc-sel="'+locCookie+'"]').addClass('active')
       $('[data-loc="'+locCookie+'"]').addClass('active')
       $('#play-now-loc').attr 'value', locCookie
-      console.log('test')
 
   methods:
     about: () ->
