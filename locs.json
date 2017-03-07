@@ -425,6 +425,221 @@
       }
     }
   }, 
+  "zh": {
+    "index": {
+      "about": {
+        "text": "根據愛因斯坦的廣義相對論，科學家預測當兩個黑洞相撞的時候，會產生以光速向四方散播的重力波。當重力波抵達地球時，會在LIGO的重力波探測器中產生可探測的輕微震動。這些震動能被轉換成聲音，讓你可以聽到黑洞相撞。可是還有其他震源例如地震或幾公里外的交通能被探測到。這些額外的震動會成為探測器中的雜訊，使分辦重力波的訊號更加困難。在黑洞獵人這個遊戲裡，你的任務是聆聽重力波探測器的數據，並嘗試分辨是否隱藏了重力波訊號，還是只是一些雜訊。按下開始遊玩來聆聽宇宙的聲音。", 
+        "title": "相關資訊"
+      }, 
+      "main": {
+        "home": "主頁", 
+        "about": "相關資訊", 
+        "listen": "聆聽首次發現的重力波", 
+        "play-now": "開始遊玩", 
+        "title": "中文"
+      }, 
+      "event": {
+        "text": "聆聽GW150914，首次直接觀察到的重力波。"
+      }, 
+      "welcome": {
+        "text": "成為黑洞獵人來尋找重力波，並發掘愛因斯坦的遺產。", 
+        "title": "傾聽宇宙"
+      }
+    }, 
+    "endgame": {
+      "do": {
+        "text": "你也能為尋找真正的重力波作出貢獻，在<a href=\"http://einstein.phys.uwm.edu/\" target=\"_blank\"> Einstein@Home</a>.找到更多資訊", 
+        "title": "尋找真正的重力波"
+      }, 
+      "main": {
+        "home": "主頁", 
+        "play-again": "再玩一次"
+      }, 
+      "complete": {
+        "text": "感謝你參與遊戲，你已經成為黑洞獵人，希望你覺得遊戲有趣。", 
+        "title": "恭喜"
+      }, 
+      "lost": {
+        "text": "感謝你參與遊戲，很遺憾你已經用盡了你的生命，請重新再來。", 
+        "title": "沒有生命了"
+      }, 
+      "learn": {
+        "text": "<a href=\"http://www.astro.cardiff.ac.uk/research/gravity/tutorial/\" target=\"_blank\"> 卡迪夫大學的重力物理組網頁載有大量重力波的資料，你可以在那兒學到更多。", 
+        "title": "知多一點"
+      }
+    }, 
+    "game": {
+      "main": {
+        "won-text": "你贏了", 
+        "level-text": "關卡", 
+        "correct-text": "找到訊號", 
+        "data-text": "數據", 
+        "check-text": "檢查數據中", 
+        "mass-text": "質量", 
+        "lost-text": "你輸了", 
+        "inclination-text": "傾斜", 
+        "incorrect-text": "沒有訊號", 
+        "continue-text": "下一關", 
+        "signal-text": "訊號"
+      }
+    }, 
+    "tutorial": {
+      "Level-9": {
+        "text": "很困難吧？為了幫助你，讓我們補充你的道具。"
+      }, 
+      "level-5": {
+        "text": "隨著訊號越來越弱和缺陷音越來越強，你會更難找出重力波訊號。我們提供了一些道具來幫助你完成任務。這些是一次性道具，我們會在遊戲中途補充這些道具。 把鼠標放在它們上面來查看它們的功用。"
+      }, 
+      "level-3": {
+        "text": "現在情況變得更有挑戰性。真正的干涉儀有缺陷，若果你不小心，可能會把這些短促的聲音當成重力波訊號。"
+      }, 
+      "level-1": {
+        "text-1": "你的任務是留心聆聽以下訊號，並在四組數據中分辦哪一組藏有訊號。開始時訊號較強，隨著遊戲進行訊號會越來越弱。", 
+        "text-2": "點擊以下檔案來聆聽訊號。這是一個沒有任何干擾的重力波訊號。", 
+        "text-3": "點擊以下檔案並按開始來聆聽重力波探測器的數據。由於探測器並非完美，數據中會有雜訊。重力波訊號藏在其中一組數據，你的任務就是把它找出來。", 
+        "text-4": "當你認為你找到了重力波訊號，按下在視窗右下角的綠色剔號。如果你答對了，你將會繼續至下一關，否則便失去一條生命，你總共有三條生命。", 
+        "title-4": "作出選擇", 
+        "title-2": "聆聽訊號", 
+        "title-3": "聆聽數據", 
+        "title-1": "歡迎成為黑洞獵人"
+      }
+    }, 
+    "quotes": {
+      "quote18": {
+        "quote": "在併合的最後過程，雙黑洞系統把總質量的5％轉換成重力輻射。這令它們成為天空中最亮的星體。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=4blackholecollisions"
+      }, 
+      "quote19": {
+        "quote": "約翰惠勒在1967年提出「黑洞」一詞。雖然我們不能透過電磁波觀測到黑洞，但它們是能透過重力波觀測到最「亮」的天體。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=1blackholes"
+      }, 
+      "quote10": {
+        "quote": "你知道嗎？重力波輻射是候斯-泰勒雙脈衝星週期延長（大概每年十微秒）的原因。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=3thehulsetaylor"
+      }, 
+      "quote11": {
+        "quote": "你知道嗎？在合適的情況下，由兩個黑洞合併所產生的黑洞會因為各向異性的重力波輻射而被拋出星系。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=4blackholecollision"
+      }, 
+      "quote12": {
+        "quote": "你知道嗎？雙黑洞系統是「標準警報」。透過量度它們的「亮度」，我們可以準確測量它們離地球的距離。因此雙黑洞系統是研究宇宙學的理想工具。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=4blackholecollisions"
+      }, 
+      "quote13": {
+        "quote": "總有一日雙黑洞能揭開當今宇宙學最具挑戰性的問題-暗能量的秘密。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/researchactivities/"
+      }, 
+      "quote14": {
+        "quote": "你知道嗎？在任何人提出建造重力波採測器前，費曼戴生在1960年就設想過融合中的黑洞是重力輻射的來源。", 
+        "weblink": ""
+      }, 
+      "quote15": {
+        "quote": "你知道嗎？重力輻射就像無線電及其他電磁波輻射一樣，是由兩種偏振組成的。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=2theeffect"
+      }, 
+      "quote16": {
+        "quote": "一個雙黑洞在生命中最後一秒所釋放的能量，比一顆擁有相似質量的恆星終其一生（數億年至幾千億年）所釋放的可見光能量總和多一百倍。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=4blackholecollisions"
+      }, 
+      "quote17": {
+        "quote": "你知道嗎？併合中的黑洞是以接近光速接近對方的。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=4blackholecollisions"
+      }, 
+      "quote25": {
+        "quote": "如果一個中子星的質量逐漸增加，它會塌縮成黑洞，還是成為其他異常的物質？我們不知道答案，但重力波觀測能給我們線索", 
+        "weblink": ""
+      }, 
+      "quote24": {
+        "quote": "我們知道質量大於太陽質量1.4倍(錢德拉塞卡極限)的白矮星會塌縮成中子星。重力波觀測能告訴我們該中子星的最大可能質量和內部結構。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=1blackholes"
+      }, 
+      "quote27": {
+        "quote": "黑洞是否像基本粒子一樣能只用質量和自旋來形容？LISA應該可以透過探測黑洞的時空結構來解答這問題。", 
+        "weblink": ""
+      }, 
+      "quote26": {
+        "quote": "密度最高的物質是甚麼？中子？夸克？奇異物質？有一天重力波觀測能解開這個問題。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=1blackholes"
+      }, 
+      "quote21": {
+        "quote": "今天宇宙學中一個最大的問題是星系中心的黑洞是如何形成的。透過測量重力波，我們可以直接觀測這些黑洞在早期宇宙的形成，為這個問題提供線索。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=5super"
+      }, 
+      "quote20": {
+        "quote": "你知道嗎？在銀河系的中心有個四百萬太陽質量的黑洞。實際上天文學家相信每個星系中心都有一個質量相似，甚或千倍質量的黑洞。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=5super"
+      }, 
+      "quote23": {
+        "quote": "重力波觀測能測試出是否所有大質量星體的最終命運都是成為黑洞，或是其他異常的緻密星體。", 
+        "weblink": ""
+      }, 
+      "quote22": {
+        "quote": "英國數學家羅傑彭羅斯曾作出以下猜想：重力奇點－－即是巨大重力的區域－－因事件視界包圍，令我們無法看見它。重力觀測或可驗證他的猜想。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=1blackholes"
+      }, 
+      "main": {
+        "weblink-text": "知道更多", 
+        "numquotes": "32", 
+        "title": "你知道嗎？"
+      }, 
+      "quote29": {
+        "quote": "當雙黑洞融合時，產生的黑洞承受的衝擊強大到足以令它脫離所屬的星系。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=4blackholecollisions"
+      }, 
+      "quote28": {
+        "quote": "超級電腦所提供的愛因斯坦方程數值解能計算出雙黑洞訊號，我們能用這些解和對照規律來尋找訊號。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=4blackholecollisions"
+      }, 
+      "quote2": {
+        "quote": "我們能用質量和自旋這兩個參數來形容天文學中的黑洞。這跟電子和質子相似。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=1blackholes"
+      }, 
+      "quote3": {
+        "quote": "當黑洞偏離它們的完美形狀時，它們會發放餘聲。這些餘聲的頻率和減震時間只因它們的質量和自旋而定", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=1blackholes"
+      }, 
+      "quote1": {
+        "quote": "黑洞並非真是黑色的，它們會發射重力波", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=1blackholes"
+      }, 
+      "quote6": {
+        "quote": "伽瑪輻射爆發是我們所知的最亮的電磁波來源，有可能來自於兩個中子星或一個中子星加上一個黑洞的相撞。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=1blackholes"
+      }, 
+      "quote7": {
+        "quote": "重力波探測器是全向的:它們在任何時間都能探測到超過天球的40％", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=7advancedligo"
+      }, 
+      "quote4": {
+        "quote": "超大質量黑洞在旋轉週期最後釋放的重力波擁有的能量比整個星系的生命週期所釋放的能量還多", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=5super"
+      }, 
+      "quote5": {
+        "quote": "雷射干涉太空天線（LISA)是由美國國家航空暨太空總署（NASA）和歐洲太空總署（ESA）合作在太空探測重力波的計劃，將會探測宇宙裡的超大質量黑洞合併。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=5super"
+      }, 
+      "quote8": {
+        "quote": "重力波探測器能同時探測不同的重力波源:黑洞和中子星的相撞、超新星爆發、高速旋轉的中子星和宇宙弦等等。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/"
+      }, 
+      "quote9": {
+        "quote": "因為重力波自產生出來就不會被散射，重力波能讓我們看到最好的大爆炸景象。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/researchactivities/"
+      }, 
+      "quote32": {
+        "quote": "經過數十年的努力，物理學家終於在2005年成功地運用電腦解出愛因斯坦方程。那些漂亮的黑洞併合影像是從那些模擬中製作的。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=4blackholecollisions"
+      }, 
+      "quote30": {
+        "quote": "一個干涉式重力波探測器能探測到比原子核少一千倍的長度變化。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=7advancedligo"
+      }, 
+      "quote31": {
+        "quote": "干涉式重力波探測器透過量度兩條探測臂的微小長度變化(應變)來探測重力波。探測器對應變的敏感度就像測量從太陽到最近的恒星之間的距離而誤差不大於頭髮的闊度一樣。", 
+        "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=7advancedligo"
+      }
+    }
+  }, 
   "de": {
     "index": {
       "about": {
