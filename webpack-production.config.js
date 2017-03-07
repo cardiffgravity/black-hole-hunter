@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 
 module.exports = {
-    debug: true,
     entry: {
         splash: './coffee/splash.coffee',
         game: './coffee/game.coffee',
@@ -28,5 +27,10 @@ module.exports = {
         }]
     },
     plugins: [
-      new webpack.optimize.UglifyJsPlugin()]
+      new webpack.optimize.UglifyJsPlugin(),
+      new webpack.DefinePlugin({
+        'process.env': {
+          NODE_ENV: '"production"'
+        }
+      })]
 };
