@@ -667,6 +667,25 @@
 }
 
 /**
+ * Volume Control
+ */
+
+.middle {
+  flex: 1 1;
+}
+
+.volume {
+  border-radius: 3px;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  display: inline;
+  font-weight: normal;
+  margin: 1em;
+  padding: 4px 8px;
+}
+
+/**
  * Localization Controls
  */
 

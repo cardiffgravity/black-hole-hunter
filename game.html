@@ -402,6 +402,12 @@
               {{homeText}}
             </a>
           </div>
+          <div class="middle" @click.stop="toggleVolume">
+            <div class="volume">
+              <i class="fa fa-volume-up" aria-hidden="true"></i>
+              Volume
+            </div>
+          </div>
           <div class="loc-sel">
             <template v-for="(loc, key) in locs">
               <div
