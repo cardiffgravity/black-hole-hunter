@@ -1,4 +1,23 @@
 /*
+ * Container
+ */
+
+.container-fluid {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/*
+ * Header
+ */
+
+#header {
+  flex: 0 0 auto;
+}
+
+/*
  * Info
  */
 
@@ -13,6 +32,10 @@
     display: flex;
     align-items: center;
   }
+}
+
+#info {
+  flex: 0 0 auto;
 }
 
 #dial-col {
@@ -282,15 +305,30 @@
 /**
  * Game
  */
+
 #game {
-  height: 30em;
+  flex: 1 1;
 }
 
 /**
  * Game::Thumbnails
  */
 
+ #wave-selector-col {
+   height: 100%;
+ }
+
+ #wave-selector-col > div.row {
+   height: 100%;
+ }
+
 .thumb-container {
+  height: 20%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+#info .thumb-container {
   height: 6em;
   padding-top: 7px;
   padding-bottom: 7px;
@@ -340,8 +378,12 @@
  * Game::Player
  */
 
+#wave-player-col {
+  height: 100%;
+}
+
 #wave-player-col > div.row {
-  height: 30em;
+  height: 100%;
 }
 
 #wave-player-container {

@@ -23,7 +23,7 @@
 
 </head>
 <body>
-  <div class="container" v-cloak>
+  <div class="container-fluid" v-cloak>
 
     <!-- Header Controls -->
     <div class="header-controls">
@@ -60,7 +60,7 @@
       <!-- Dial -->
       <div
         id="dial-col"
-        class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1"
+        class="col-md-2"
         :data-level="level"
         :data-max-level="maxLevel"
         :data-lives="lives"
@@ -72,7 +72,7 @@
       </div>
 
       <!-- Console -->
-      <div id="console-col" class="col-xs-12 col-sm-9 col-md-8">
+      <div id="console-col" class="col-md-10">
         <div id="console">
           <!-- Factual quotes -->
           <div id="question" v-if="level > 1">
@@ -216,7 +216,7 @@
     <div id="game" class="row">
 
       <!-- Selector -->
-      <div id="wave-selector-col" class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1">
+      <div id="wave-selector-col" class="col-md-2">
         <div class="row">
           <div class="thumb-container col-xs-4 col-sm-12">
             <div id="thumb-signal" class="thumb" @click.stop="display" data-target="wave-signal">
@@ -262,7 +262,7 @@
       </div>
 
       <!-- Player -->
-      <div id="wave-player-col" class="col-xs-12 col-sm-9 col-md-8">
+      <div id="wave-player-col" class="col-md-10">
         <div class="row">
           <div id="wave-player-container" class="col-xs-12">
             <div id="wave-player-container-paddless"> <!-- http://stackoverflow.com/questions/17115344/absolute-positioning-ignoring-padding-of-parent/30826028#30826028 -->

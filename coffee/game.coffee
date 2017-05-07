@@ -147,7 +147,6 @@ genThumbs = () ->
     wave = thumb.find '.thumb-wave'
     waveTarget = thumb.data 'target'
     waveColor = GLOBAL_WAVES[waveTarget].progressColor
-    buffer = GLOBAL_WAVES[waveTarget].wave.backend.buffer
 
     # Dynamically set HTML height dep on browser calculated .thumb-title height
     wave[0].height = thumbHeight - thumbTitleHeight
@@ -163,7 +162,7 @@ genThumbs = () ->
       hideScrollbar: true
 
     # Load data
-    wavesurfer.loadDecodedBuffer buffer
+    wavesurfer.load $('#'+waveTarget).data 'src'
 
 #
 # remove the .render classes on items in tutorial carousel
@@ -199,7 +198,6 @@ genTut2Thumbs = () ->
     wave = thumb.find '.thumb-wave-tut'
     waveTarget = thumb.data 'target'
     waveColor = GLOBAL_WAVES[waveTarget].progressColor
-    buffer = GLOBAL_WAVES[waveTarget].wave.backend.buffer
 
     # Dynamically set HTML height dep on browser calculated .thumb-title height
     wave[0].height = thumbHeight - thumbTitleHeight
@@ -218,7 +216,7 @@ genTut2Thumbs = () ->
     wavesurfer.on 'ready', removeRenderClosure
 
     # Load data
-    wavesurfer.loadDecodedBuffer buffer
+    wavesurfer.load $('#'+waveTarget).data 'src'
 
 #
 # Generate waveforms for un-selectable thumbnails (Tutorial::Item 3)
@@ -236,7 +234,6 @@ genTut3Thumbs = () ->
     wave = thumb.find '.thumb-wave-tut-stack'
     waveTarget = thumb.data 'target'
     waveColor = GLOBAL_WAVES[waveTarget].progressColor
-    buffer = GLOBAL_WAVES[waveTarget].wave.backend.buffer
 
     # Dynamically set HTML height dep on browser calculated .thumb-title height
     wave[0].height = thumbHeight - thumbTitleHeight
@@ -255,7 +252,7 @@ genTut3Thumbs = () ->
     wavesurfer.on 'ready', removeRenderClosure
 
     # Load data
-    wavesurfer.loadDecodedBuffer buffer
+    wavesurfer.load $('#'+waveTarget).data 'src'
 
 #
 # Trigger generation of thumbnails in Selector column and tutorial
@@ -303,9 +300,6 @@ addWaveforms = () ->
       wave.on 'ready', displayNoneClosure(waveElm)
     else
       waveElm.css 'opacity', 100
-
-    # Generate all thumbnails
-    wave.on 'ready', genThumbsOnAllLoad
 
     # Load data
     wave.load waveElm.data('src')
@@ -444,25 +438,26 @@ visibleWave = () ->
 # [source-2](http://ryanringler.com/blog/2014/08/24/fixed-height-carousel-for-twitter-bootstrap)
 #
 carouselNormalization = () ->
-   items = $('#tut-carousel .item')   # Grab all slides
-   heights = []                       # Empty array to store height values
-   tallest = 0                        # To hold tallest slide height
+  items = $('#tut-carousel .item')   # Grab all slides
+  heights = []                       # Empty array to store height values
+  tallest = 0                        # To hold tallest slide height
 
-   if items.length
-       normalizeHeights = () ->
-           items.each () -> # add heights to array
-               heights.push $(@).height()
-           tallest = Math.max.apply null, heights  # cache largest value
-           items.each () ->
-               $(@).css 'min-height', tallest + 'px'
-       normalizeHeights()
+  if items.length
+    normalizeHeights = () ->
+      items.each () -> # add heights to array
+        heights.push $(@).height()
+      tallest = Math.max.apply null, heights  # cache largest value
+      items.each () ->
+        $(@).css 'min-height', tallest + 'px'
+    normalizeHeights()
+    $('#game').hide().show(0) # Force a redraw as `flexbox` needs it, 0 is ness
 
-       $(window).on 'resize orientationchange', () ->
-           tallest = 0
-           heights.length = 0 # reset vars
-           items.each () ->
-               $(@).css 'min-height','0'  # reset min-height
-           normalizeHeights() # run it again
+    $(window).on 'resize orientationchange', () ->
+      tallest = 0
+      heights.length = 0 # reset vars
+      items.each () ->
+        $(@).css 'min-height','0'  # reset min-height
+      normalizeHeights() # run it again
 
 #
 # Check Preloader
@@ -502,7 +497,7 @@ addTooltips = () ->
       'hide': 500
 
 game = new Vue
-  el: '.container'
+  el: '.container-fluid'
 
   data:
     locs: require('../locs.json')
@@ -581,12 +576,15 @@ game = new Vue
 
   mounted: () ->
     setRenderLives()
-    addWaveforms()
+    genTut2Thumbs()
+    genTut3Thumbs()
     addBackgroundTicks()
     carouselNormalization()
+    genThumbs()
+    addWaveforms()
     addCheckPreloader()
     addTooltips()
-    
+
     locCookie = getCookie('loc') or 'en'
     $('[data-loc-sel="'+locCookie+'"]').addClass('active')
     $('[data-loc="'+locCookie+'"]').addClass('active')
