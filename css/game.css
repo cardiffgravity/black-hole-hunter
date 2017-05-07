@@ -646,8 +646,10 @@
 
 .home {
   flex: 1 1;
-  margin-top: 1em;
-  margin-left: 1em;
+}
+
+.home a {
+  margin: 1em;
 }
 
 /**
@@ -655,8 +657,6 @@
  */
 
 .loc-sel {
-  margin-right: 1em;
-  margin-top: 1em;
   white-space: nowrap;
   font-size: 10px;
   color: #eeeeee;
@@ -666,6 +666,8 @@
 }
 
 .loc-sel > div {
+  margin-top: 1em;
+  margin-bottom: 1em;
   float: left;
   display: inline-block;
   padding: 4px;
