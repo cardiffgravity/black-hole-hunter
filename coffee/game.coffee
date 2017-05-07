@@ -524,6 +524,7 @@ game = new Vue
     ob4:
       src: ""
       signal: 0
+    volume: Number(getCookie('volume')) or 1.0
 
   computed:
     levelText: () -> @locs[@loc].game.main['level-text']
@@ -551,6 +552,7 @@ game = new Vue
     lostText: () -> @locs[@loc].game.main['lost-text']
     massText: () -> @locs[@loc].game.main['mass-text']
     inclinationText: () -> @locs[@loc].game.main['inclination-text']
+    homeText: () -> @locs[@loc].index.main['home']
 
   created: () ->
     # Generate paths to random noise waveforms
@@ -584,6 +586,7 @@ game = new Vue
     addWaveforms()
     addCheckPreloader()
     addTooltips()
+    @setVolume()
 
     locCookie = getCookie('loc') or 'en'
     $('[data-loc-sel="'+locCookie+'"]').addClass('active')
@@ -753,3 +756,18 @@ game = new Vue
       # Set form value for cgi
       locCookie = getCookie('loc') or 'en'
       $('#play-now-loc').attr 'value', locCookie
+
+    toggleVolume: () ->
+      if @volume is 0.2
+        @volume = 0.6
+      else if @volume is 0.6
+        @volume = 1.0
+      else if @volume is 1.0
+        @volume = 0.2
+
+      setCookie('volume', @volume)
+      @setVolume()
+
+    setVolume: () ->
+      for key, wave of GLOBAL_WAVES
+        wave['wave'].setVolume(@volume)

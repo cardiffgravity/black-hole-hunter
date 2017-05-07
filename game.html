@@ -25,24 +25,6 @@
 <body>
   <div class="container-fluid" v-cloak>
 
-    <!-- Header Controls -->
-    <div class="header-controls">
-      <div class="home-control">
-        <a href="./" target="_self">
-          <i class="fa fa-home" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="loc-sel">
-        <template v-for="(loc, key) in locs">
-          <div
-            @click.stop="selectLoc"
-            :data-loc-sel="key"
-            v-html="loc.index.main.title">
-          </div>
-        </template>
-      </div>
-    </div>
-
     <!-- Header -->
     <div id="header" class="row">
       <div class="col-xs-12">
@@ -413,6 +395,29 @@
     <!-- Footer -->
     <div id="footer" class="row">
       <div class="col-xs-12">
+        <div class="global-nav">
+          <div class="home">
+            <a href="./" target="_self">
+              <i class="fa fa-home" aria-hidden="true"></i>
+              {{homeText}}
+            </a>
+          </div>
+          <div class="middle" @click.stop="toggleVolume">
+            <div class="volume">
+              <i class="fa fa-volume-up" aria-hidden="true"></i>
+              Volume
+            </div>
+          </div>
+          <div class="loc-sel">
+            <template v-for="(loc, key) in locs">
+              <div
+                @click.stop="selectLoc"
+                :data-loc-sel="key"
+                v-html="loc.index.main.title">
+              </div>
+            </template>
+          </div>
+        </div>
       </div>
     </div>
 

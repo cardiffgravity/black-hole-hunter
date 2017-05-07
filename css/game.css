@@ -622,7 +622,12 @@
  */
 
 #footer {
-  height: 2em;
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+#footer > .col-xs-12 {
+  padding: 0;
 }
 
 [v-cloak] {
@@ -630,25 +635,54 @@
 }
 
 /**
- * Header Controls
+ * Global Navigation
  */
 
-.header-controls {
-  position: absolute;
-  top: 0;
-  left: 0;
+.global-nav {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  font-weight: normal;
+  align-items: center;
+  background-color: black;
+  border-top: 1px solid white;
+  margin-top: 1em;
 }
 
 /**
  * Home Control
  */
 
-.home-control {
-  position: absolute;
-  left:0;
-  margin-top: 1em;
-  margin-left: 1em;
+.home {
+  flex: 1 1;
+}
+
+.home a {
+  margin: 1em;
+  font-weight: normal;
+  border-radius: 3px;
+  border: 1px solid white;
+  padding: 4px 8px;
+}
+
+/**
+ * Volume Control
+ */
+
+.middle {
+  flex: 1 1;
+}
+
+.volume {
+  border-radius: 3px;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  display: inline;
+  font-weight: normal;
+  margin: 1em;
+  padding: 4px 8px;
 }
 
 /**
@@ -656,28 +690,28 @@
  */
 
 .loc-sel {
-  position: absolute;
-  right: 0;
-  margin-right: 1em;
-  margin-top: 1em;
   white-space: nowrap;
-  font-size: 10px;
   color: #eeeeee;
   font-family: 'Open Sans', sans-serif;
   z-index: 999;
+  flex: 0 0 auto;
 }
 
 .loc-sel > div {
+  margin-top: 1em;
+  margin-bottom: 1em;
   float: left;
   display: inline-block;
-  padding: 4px;
-  margin-right: 2px;
+  margin-right: 8px;
   cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid white;
+  padding: 4px 8px;
 }
 
 .loc-sel > .active {
-  border-radius: 3px;
-  background-color: rgba(255,255,255,0.2);
+  color: black;
+  background-color: white;
 }
 
 [data-loc] {
