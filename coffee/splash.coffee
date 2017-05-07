@@ -46,20 +46,7 @@ splash = new Vue
     setCookie('level', 1)
     setCookie('lives', 3)
 
-  mounted: () ->
-      locCookie = getCookie('loc') or 'en'
-      $('[data-loc-sel="'+locCookie+'"]').addClass('active')
-      $('[data-loc="'+locCookie+'"]').addClass('active')
-
   methods:
-    about: () ->
-      $('#welcome').removeClass().addClass('op-out')
-      $('#about').removeClass().addClass('op-in')
-
-    home: () ->
-      $('#about').removeClass().addClass('op-out')
-      $('#welcome').removeClass().addClass('op-in')
-
     selectLoc: (e) ->
       target = $(e.currentTarget)
 
@@ -74,12 +61,4 @@ splash = new Vue
 
       # Set cookie
       document.cookie = loc+expires+"path=/;"
-
-      # Set selector styles
-      $('[data-loc-sel]').removeClass()
-      $('[data-loc-sel="'+locVal+'"]').addClass('active')
-
-      # Set display styles
-      $('[data-loc]').removeClass()
-      $('[data-loc='+locVal+']').addClass('active')
 
