@@ -450,6 +450,7 @@ carouselNormalization = () ->
       items.each () ->
         $(@).css 'min-height', tallest + 'px'
     normalizeHeights()
+    $('#game').hide().show(0) # Force a redraw as `flexbox` needs it, 0 is ness
 
     $(window).on 'resize orientationchange', () ->
       tallest = 0
@@ -496,7 +497,7 @@ addTooltips = () ->
       'hide': 500
 
 game = new Vue
-  el: '.container'
+  el: '.container-fluid'
 
   data:
     locs: require('../locs.json')
