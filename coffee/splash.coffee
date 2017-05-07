@@ -50,7 +50,6 @@ splash = new Vue
       locCookie = getCookie('loc') or 'en'
       $('[data-loc-sel="'+locCookie+'"]').addClass('active')
       $('[data-loc="'+locCookie+'"]').addClass('active')
-      $('#play-now-loc').attr 'value', locCookie
 
   methods:
     about: () ->
@@ -84,6 +83,3 @@ splash = new Vue
       $('[data-loc]').removeClass()
       $('[data-loc='+locVal+']').addClass('active')
 
-      # Set form value for cgi
-      locCookie = getCookie('loc') or 'en'
-      $('#play-now-loc').attr 'value', locCookie
