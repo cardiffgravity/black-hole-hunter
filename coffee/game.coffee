@@ -147,7 +147,6 @@ genThumbs = () ->
     wave = thumb.find '.thumb-wave'
     waveTarget = thumb.data 'target'
     waveColor = GLOBAL_WAVES[waveTarget].progressColor
-    buffer = GLOBAL_WAVES[waveTarget].wave.backend.buffer
 
     # Dynamically set HTML height dep on browser calculated .thumb-title height
     wave[0].height = thumbHeight - thumbTitleHeight
@@ -163,7 +162,7 @@ genThumbs = () ->
       hideScrollbar: true
 
     # Load data
-    wavesurfer.loadDecodedBuffer buffer
+    wavesurfer.load $('#'+waveTarget).data 'src'
 
 #
 # remove the .render classes on items in tutorial carousel
@@ -199,7 +198,6 @@ genTut2Thumbs = () ->
     wave = thumb.find '.thumb-wave-tut'
     waveTarget = thumb.data 'target'
     waveColor = GLOBAL_WAVES[waveTarget].progressColor
-    buffer = GLOBAL_WAVES[waveTarget].wave.backend.buffer
 
     # Dynamically set HTML height dep on browser calculated .thumb-title height
     wave[0].height = thumbHeight - thumbTitleHeight
@@ -218,7 +216,7 @@ genTut2Thumbs = () ->
     wavesurfer.on 'ready', removeRenderClosure
 
     # Load data
-    wavesurfer.loadDecodedBuffer buffer
+    wavesurfer.load $('#'+waveTarget).data 'src'
 
 #
 # Generate waveforms for un-selectable thumbnails (Tutorial::Item 3)
@@ -236,7 +234,6 @@ genTut3Thumbs = () ->
     wave = thumb.find '.thumb-wave-tut-stack'
     waveTarget = thumb.data 'target'
     waveColor = GLOBAL_WAVES[waveTarget].progressColor
-    buffer = GLOBAL_WAVES[waveTarget].wave.backend.buffer
 
     # Dynamically set HTML height dep on browser calculated .thumb-title height
     wave[0].height = thumbHeight - thumbTitleHeight
@@ -255,7 +252,7 @@ genTut3Thumbs = () ->
     wavesurfer.on 'ready', removeRenderClosure
 
     # Load data
-    wavesurfer.loadDecodedBuffer buffer
+    wavesurfer.load $('#'+waveTarget).data 'src'
 
 #
 # Trigger generation of thumbnails in Selector column and tutorial
@@ -303,9 +300,6 @@ addWaveforms = () ->
       wave.on 'ready', displayNoneClosure(waveElm)
     else
       waveElm.css 'opacity', 100
-
-    # Generate all thumbnails
-    wave.on 'ready', genThumbsOnAllLoad
 
     # Load data
     wave.load waveElm.data('src')
@@ -581,12 +575,15 @@ game = new Vue
 
   mounted: () ->
     setRenderLives()
-    addWaveforms()
+    genTut2Thumbs()
+    genTut3Thumbs()
     addBackgroundTicks()
     carouselNormalization()
+    genThumbs()
+    addWaveforms()
     addCheckPreloader()
     addTooltips()
-    
+
     locCookie = getCookie('loc') or 'en'
     $('[data-loc-sel="'+locCookie+'"]').addClass('active')
     $('[data-loc="'+locCookie+'"]').addClass('active')
