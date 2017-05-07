@@ -551,6 +551,7 @@ game = new Vue
     lostText: () -> @locs[@loc].game.main['lost-text']
     massText: () -> @locs[@loc].game.main['mass-text']
     inclinationText: () -> @locs[@loc].game.main['inclination-text']
+    homeText: () -> @locs[@loc].index.main['home']
 
   created: () ->
     # Generate paths to random noise waveforms
