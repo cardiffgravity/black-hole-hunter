@@ -438,25 +438,25 @@ visibleWave = () ->
 # [source-2](http://ryanringler.com/blog/2014/08/24/fixed-height-carousel-for-twitter-bootstrap)
 #
 carouselNormalization = () ->
-   items = $('#tut-carousel .item')   # Grab all slides
-   heights = []                       # Empty array to store height values
-   tallest = 0                        # To hold tallest slide height
+  items = $('#tut-carousel .item')   # Grab all slides
+  heights = []                       # Empty array to store height values
+  tallest = 0                        # To hold tallest slide height
 
-   if items.length
-       normalizeHeights = () ->
-           items.each () -> # add heights to array
-               heights.push $(@).height()
-           tallest = Math.max.apply null, heights  # cache largest value
-           items.each () ->
-               $(@).css 'min-height', tallest + 'px'
-       normalizeHeights()
+  if items.length
+    normalizeHeights = () ->
+      items.each () -> # add heights to array
+        heights.push $(@).height()
+      tallest = Math.max.apply null, heights  # cache largest value
+      items.each () ->
+        $(@).css 'min-height', tallest + 'px'
+    normalizeHeights()
 
-       $(window).on 'resize orientationchange', () ->
-           tallest = 0
-           heights.length = 0 # reset vars
-           items.each () ->
-               $(@).css 'min-height','0'  # reset min-height
-           normalizeHeights() # run it again
+    $(window).on 'resize orientationchange', () ->
+      tallest = 0
+      heights.length = 0 # reset vars
+      items.each () ->
+        $(@).css 'min-height','0'  # reset min-height
+      normalizeHeights() # run it again
 
 #
 # Check Preloader
