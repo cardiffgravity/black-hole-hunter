@@ -622,7 +622,8 @@
  */
 
 #footer {
-  height: 2em;
+  flex: 0 0 auto;
+  min-width: 0;
 }
 
 [v-cloak] {
@@ -634,10 +635,9 @@
  */
 
 .header-controls {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 /**
@@ -645,8 +645,7 @@
  */
 
 .home-control {
-  position: absolute;
-  left:0;
+  flex: 1 1;
   margin-top: 1em;
   margin-left: 1em;
 }
@@ -656,8 +655,6 @@
  */
 
 .loc-sel {
-  position: absolute;
-  right: 0;
   margin-right: 1em;
   margin-top: 1em;
   white-space: nowrap;
@@ -665,6 +662,7 @@
   color: #eeeeee;
   font-family: 'Open Sans', sans-serif;
   z-index: 999;
+  flex: 0 0 auto;
 }
 
 .loc-sel > div {
