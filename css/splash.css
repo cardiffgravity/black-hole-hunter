@@ -162,3 +162,71 @@ body {
   text-align: right;
   right: 0;
 }
+
+/**
+ * Start Screen
+ */
+
+#start-screen {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100vh;
+  justify-content: space-around;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  padding: 0 30vw;
+  font-size: 2em;
+}
+
+.start-item {
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  flex: 0 0 auto;
+  height: 30vh;
+  padding: 0;
+  margin: 0;
+  width: 15vw;
+  background-color: black;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.start-item:active {
+  background-color: white;
+  color: black;
+  height: 28.5vh;
+  margin: 0.75vh 0.375vw;
+  width: 14.25vw;
+}
+
+.start-title {
+  flex: 1 1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.start-name {
+  border-radius: 3px;
+  border: 1px solid white;
+  cursor: pointer;
+  display: inline;
+  font-weight: normal;
+  margin: 0.75em;
+  padding: 4px 0;
+  flex: 0 0 auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.start-item:active .start-name {
+  border: 1px solid black;
+}

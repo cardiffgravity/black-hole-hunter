@@ -72,8 +72,19 @@
       </div>
     </div>
 
-  </div>
+    <!-- Start screen -->
+    <div id="start-screen">
+      <template v-for="(loc, key) in locs">
+      <div class="start-item" :data-loc-sel="key" @click="play">
+        <div class="start-title" v-html="loc.index.main['play-now']">
+        </div>
+        <div class="start-name" v-html="loc.index.main.title">
+        </div>
+      </div>
+     </template>
+    </div>
 
+  </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

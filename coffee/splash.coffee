@@ -62,3 +62,6 @@ splash = new Vue
       # Set cookie
       document.cookie = loc+expires+"path=/;"
 
+    play: (e) ->
+      @selectLoc e
+      window.open 'game.html', '_self'
