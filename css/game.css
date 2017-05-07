@@ -631,10 +631,10 @@
 }
 
 /**
- * Header Controls
+ * Global Navigation
  */
 
-.header-controls {
+.global-nav {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -644,7 +644,7 @@
  * Home Control
  */
 
-.home-control {
+.home {
   flex: 1 1;
   margin-top: 1em;
   margin-left: 1em;
