@@ -46,21 +46,7 @@ splash = new Vue
     setCookie('level', 1)
     setCookie('lives', 3)
 
-  mounted: () ->
-      locCookie = getCookie('loc') or 'en'
-      $('[data-loc-sel="'+locCookie+'"]').addClass('active')
-      $('[data-loc="'+locCookie+'"]').addClass('active')
-      $('#play-now-loc').attr 'value', locCookie
-
   methods:
-    about: () ->
-      $('#welcome').removeClass().addClass('op-out')
-      $('#about').removeClass().addClass('op-in')
-
-    home: () ->
-      $('#about').removeClass().addClass('op-out')
-      $('#welcome').removeClass().addClass('op-in')
-
     selectLoc: (e) ->
       target = $(e.currentTarget)
 
@@ -76,14 +62,6 @@ splash = new Vue
       # Set cookie
       document.cookie = loc+expires+"path=/;"
 
-      # Set selector styles
-      $('[data-loc-sel]').removeClass()
-      $('[data-loc-sel="'+locVal+'"]').addClass('active')
-
-      # Set display styles
-      $('[data-loc]').removeClass()
-      $('[data-loc='+locVal+']').addClass('active')
-
-      # Set form value for cgi
-      locCookie = getCookie('loc') or 'en'
-      $('#play-now-loc').attr 'value', locCookie
+    play: (e) ->
+      @selectLoc e
+      window.open 'game.html', '_self'
