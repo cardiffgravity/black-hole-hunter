@@ -626,6 +626,10 @@
   min-width: 0;
 }
 
+#footer > .col-xs-12 {
+  padding: 0;
+}
+
 [v-cloak] {
   display: none;
 }
@@ -638,6 +642,12 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  font-size: 12px;
+  font-weight: normal;
+  align-items: center;
+  background-color: black;
+  border-top: 1px solid white;
+  margin-top: 1em;
 }
 
 /**
@@ -650,6 +660,10 @@
 
 .home a {
   margin: 1em;
+  font-weight: normal;
+  border-radius: 3px;
+  border: 1px solid white;
+  padding: 4px 8px;
 }
 
 /**
@@ -658,7 +672,6 @@
 
 .loc-sel {
   white-space: nowrap;
-  font-size: 10px;
   color: #eeeeee;
   font-family: 'Open Sans', sans-serif;
   z-index: 999;
@@ -670,14 +683,16 @@
   margin-bottom: 1em;
   float: left;
   display: inline-block;
-  padding: 4px;
-  margin-right: 2px;
+  margin-right: 8px;
   cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid white;
+  padding: 4px 8px;
 }
 
 .loc-sel > .active {
-  border-radius: 3px;
-  background-color: rgba(255,255,255,0.2);
+  color: black;
+  background-color: white;
 }
 
 [data-loc] {
