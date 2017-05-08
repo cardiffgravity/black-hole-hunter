@@ -1,4 +1,5 @@
 require('../game.html')
+_ = require('lodash');
 
 #
 # Get a cookie's value
@@ -525,6 +526,8 @@ game = new Vue
       src: ""
       signal: 0
     volume: Number(getCookie('volume')) or 1.0
+    showTimeout: false
+    timeoutID: 0
 
   computed:
     levelText: () -> @locs[@loc].game.main['level-text']
@@ -553,6 +556,8 @@ game = new Vue
     massText: () -> @locs[@loc].game.main['mass-text']
     inclinationText: () -> @locs[@loc].game.main['inclination-text']
     homeText: () -> @locs[@loc].index.main['home']
+    timeoutBodyText: () -> "Do you need more time?"
+    timeoutButtonText: () -> "Yes"
 
   created: () ->
     # Generate paths to random noise waveforms
@@ -587,6 +592,7 @@ game = new Vue
     addCheckPreloader()
     addTooltips()
     @setVolume()
+    @timeout()
 
     locCookie = getCookie('loc') or 'en'
     $('[data-loc-sel="'+locCookie+'"]').addClass('active')
@@ -771,3 +777,15 @@ game = new Vue
     setVolume: () ->
       for key, wave of GLOBAL_WAVES
         wave['wave'].setVolume(@volume)
+
+    timeout: _.debounce () ->
+      @showTimeout = true
+      @timeoutID = setTimeout () ->
+        window.open 'index.html', '_self'
+      , 10000
+    , 20000
+
+    cancelTimeout: () ->
+      clearTimeout @timeoutID
+      @showTimeout = false
+      @timeout()

@@ -23,7 +23,7 @@
 
 </head>
 <body>
-  <div class="container-fluid" v-cloak>
+  <div class="container-fluid" @click="timeout" v-cloak>
 
     <!-- Header -->
     <div id="header" class="row">
@@ -416,6 +416,20 @@
                 v-html="loc.index.main.title">
               </div>
             </template>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeout screen -->
+    <div id="timeout-screen" v-if="showTimeout">
+      <div class="timeout-item">
+        <div class="timeout-body" v-html="timeoutBodyText">
+        </div>
+        <div class="timeout-button" v-html="timeoutButtonText" @click="cancelTimeout">
+        </div>
+        <div class="timeout-timer">
+          <div class="expand">
           </div>
         </div>
       </div>

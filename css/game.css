@@ -721,3 +721,82 @@
 [data-loc].active {
   display: block;
 }
+
+/**
+ * Timeout Screen
+ */
+
+#timeout-screen {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100vh;
+  justify-content: space-around;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  padding: 0 30vw;
+  font-size: 2em;
+  z-index: 1280;
+}
+
+.timeout-item {
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 1.0);
+  flex: 0 0 auto;
+  height: 30vh;
+  padding: 0;
+  margin: 0;
+  width: 15vw;
+  background-color: black;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.timeout-body {
+  flex: 1 1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+}
+
+.timeout-button {
+  border-radius: 3px;
+  border: 1px solid white;
+  cursor: pointer;
+  display: inline;
+  font-weight: normal;
+  margin: 0.75em;
+  padding: 4px 0;
+  flex: 0 0 auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.timeout-button:active {
+  color: black;
+  background-color: white;
+}
+
+@keyframes expandWidth {
+   0% { width: 0; }
+   100% { width: 100%; }
+}
+
+.timeout-timer {
+  margin: 0.75em;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.timeout-timer .expand {
+  animation: expandWidth 10s linear 1;
+  background-color: white;
+  height: 100%;
+}
