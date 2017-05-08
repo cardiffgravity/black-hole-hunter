@@ -201,7 +201,7 @@
       <div id="wave-selector-col" class="col-md-2">
         <div class="row">
           <div class="thumb-container col-xs-4 col-sm-12">
-            <div id="thumb-signal" class="thumb" @click.stop="display" data-target="wave-signal">
+            <div id="thumb-signal" class="thumb" @click="display" data-target="wave-signal">
               <div class="thumb-title">
                 {{signalText}}
               </div>
@@ -209,7 +209,7 @@
             </div>
           </div>
           <div class="thumb-container col-xs-2 col-sm-12">
-            <div id="thumb-ob1" class="thumb" @click.stop="display" data-target="wave-ob1">
+            <div id="thumb-ob1" class="thumb" @click="display" data-target="wave-ob1">
               <div class="thumb-title">
                 {{dataText}} 1
               </div>
@@ -217,7 +217,7 @@
             </div>
           </div>
           <div class="thumb-container col-xs-2 col-sm-12">
-            <div id="thumb-ob2" class="thumb" @click.stop="display" data-target="wave-ob2">
+            <div id="thumb-ob2" class="thumb" @click="display" data-target="wave-ob2">
               <div class="thumb-title">
                 {{dataText}} 2
               </div>
@@ -225,7 +225,7 @@
             </div>
           </div>
           <div class="thumb-container col-xs-2 col-sm-12">
-            <div id="thumb-ob3" class="thumb" @click.stop="display" data-target="wave-ob3">
+            <div id="thumb-ob3" class="thumb" @click="display" data-target="wave-ob3">
               <div class="thumb-title">
                 {{dataText}} 3
               </div>
@@ -233,7 +233,7 @@
             </div>
           </div>
           <div class="thumb-container col-xs-2 col-sm-12">
-            <div id="thumb-ob4" class="thumb" @click.stop="display" data-target="wave-ob4">
+            <div id="thumb-ob4" class="thumb" @click="display" data-target="wave-ob4">
               <div class="thumb-title">
                 {{dataText}} 4
               </div>
@@ -351,35 +351,35 @@
 
               <!-- Navigation -->
               <div id="navigation">
-                <span id="play" class="glyphicon glyphicon-play" @click.stop="play"></span>
+                <span id="play" class="glyphicon glyphicon-play" @click="play"></span>
                 &nbsp;
-                <span id="pause" class="glyphicon glyphicon-pause" @click.stop="pause"></span>
+                <span id="pause" class="glyphicon glyphicon-pause" @click="pause"></span>
                 &nbsp;
-                <span id="repeat" class="glyphicon glyphicon-repeat" @click.stop="repeat"></span>
+                <span id="repeat" class="glyphicon glyphicon-repeat" @click="repeat"></span>
               </div>
 
               <!-- Check -->
               <div id="check">
-                <span id="tick" class="glyphicon glyphicon-ok" @click.stop="check"></span>
+                <span id="tick" class="glyphicon glyphicon-ok" @click="check"></span>
                 <span id="tick-noclick" class="glyphicon glyphicon-ok"></span>
               </div>
 
               <!-- Continue -->
-              <div id="continue" @click.stop="nextLevel">
+              <div id="continue" @click="nextLevel">
                 <div class="center">
                   <div>{{continueText}}</div>
                 </div>
               </div>
 
               <!-- Won -->
-              <div id="won" @click.stop="complete">
+              <div id="won" @click="complete">
                 <div class="center">
                   <div>{{wonText}} ... <span class="counter"></span></div>
                 </div>
               </div>
 
               <!-- Lost -->
-              <div id="lost" @click.stop="lost">
+              <div id="lost" @click="lost">
                 <div class="center">
                   <div>{{lostText}} ... <span class="counter"></span></div>
                 </div>
@@ -402,7 +402,7 @@
               {{homeText}}
             </a>
           </div>
-          <div class="middle" @click.stop="toggleVolume">
+          <div class="middle" @click="toggleVolume">
             <div class="volume">
               <i class="fa fa-volume-up" aria-hidden="true"></i>
               Volume
@@ -411,7 +411,7 @@
           <div class="loc-sel">
             <template v-for="(loc, key) in locs">
               <div
-                @click.stop="selectLoc"
+                @click="selectLoc"
                 :data-loc-sel="key"
                 v-html="loc.index.main.title">
               </div>
