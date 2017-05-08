@@ -20,6 +20,7 @@
   <!-- Load site css -->
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/game.css">
+  <link rel="stylesheet" href="./css/volume.css">
 
 </head>
 <body>
@@ -404,7 +405,12 @@
           </div>
           <div class="middle" @click="toggleVolume">
             <div class="volume">
-              <i class="fa fa-volume-up" aria-hidden="true"></i>
+              <i
+                :class="{
+                  'volume-low': volume==0.2,
+                  'volume-medium': volume==0.6,
+                  'volume-high': volume==1.0}"
+                aria-hidden="true"></i>
               Volume
             </div>
           </div>
