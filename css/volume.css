@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'volume';
+  src:
+    url('../font/volume.ttf?fvymes') format('truetype'),
+    url('../font/volume.woff?fvymes') format('woff'),
+    url('../font/volume.svg?fvymes#volume') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.volume i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'volume' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.volume .volume-low:before {
+  content: "\f028";
+}
+.volume .volume-medium:before {
+  content: "\f029";
+}
+.volume .volume-high:before {
+  content: "\f02a";
+}
