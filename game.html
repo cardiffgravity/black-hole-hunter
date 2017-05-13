@@ -428,11 +428,11 @@
     </div>
 
     <!-- Timeout screen -->
-    <div id="timeout-screen" v-if="showTimeout">
+    <div id="timeout-screen" v-if="showTimeout" @click="cancelTimeout">
       <div class="timeout-item">
         <div class="timeout-body" v-html="timeoutBodyText">
         </div>
-        <div class="timeout-button" v-html="timeoutButtonText" @click="cancelTimeout">
+        <div class="timeout-button" v-html="timeoutButtonText">
         </div>
         <div class="timeout-timer">
           <div class="expand">
