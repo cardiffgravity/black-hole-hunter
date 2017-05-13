@@ -556,8 +556,8 @@ game = new Vue
     massText: () -> @locs[@loc].game.main['mass-text']
     inclinationText: () -> @locs[@loc].game.main['inclination-text']
     homeText: () -> @locs[@loc].index.main['home']
-    timeoutBodyText: () -> "Do you need more time?"
-    timeoutButtonText: () -> "Yes"
+    timeoutBodyText: () -> @locs[@loc].game.main['timeout-body-text']
+    timeoutButtonText: () -> @locs[@loc].game.main['timeout-button-text']
 
   created: () ->
     # Generate paths to random noise waveforms
