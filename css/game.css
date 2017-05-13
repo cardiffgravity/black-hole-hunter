@@ -639,15 +639,17 @@
  */
 
 .global-nav {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: row;
-  font-size: 14px;
+  font-size: 3vh;
   font-weight: normal;
   align-items: center;
   background-color: black;
   border-top: 1px solid white;
   margin-top: 1em;
+  padding: 0 2.5vw;
+  height: 7vh;
 }
 
 /**
@@ -659,11 +661,11 @@
 }
 
 .home a {
-  margin: 1em;
+  margin: 0;
   font-weight: normal;
-  border-radius: 3px;
+  border-radius: 0.4vh;
   border: 1px solid white;
-  padding: 4px 8px;
+  padding: 0.1em 0.45em;
 }
 
 /**
@@ -675,14 +677,14 @@
 }
 
 .volume {
-  border-radius: 3px;
+  border-radius: 0.4vh;
   border: 1px solid white;
   color: white;
   cursor: pointer;
   display: inline;
   font-weight: normal;
-  margin: 1em;
-  padding: 4px 8px;
+  margin: 0;
+  padding: 0.1em 0.45em;
 }
 
 /**
@@ -698,15 +700,17 @@
 }
 
 .loc-sel > div {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: 0;
   float: right;
   display: inline-block;
-  margin-right: 8px;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 0.4vh;
   border: 1px solid white;
-  padding: 4px 8px;
+  padding: 0.1em 0.45em;
+}
+
+.loc-sel > div:last-child {
+  margin-right: 0.75em;
 }
 
 .loc-sel > .active {
