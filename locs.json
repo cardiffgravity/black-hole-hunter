@@ -40,12 +40,14 @@
     }, 
     "game": {
       "main": {
+        "timeout-button-text": "Oui", 
         "won-text": "PARTIE GAGNÉE", 
         "level-text": "NIVEAU", 
         "correct-text": "SIGNAL PRÉSENT", 
         "data-text": "FICHIER", 
         "check-text": "VÉRIFICATION DES DONNÉES", 
         "mass-text": "MASSE", 
+        "timeout-body-text": "Avez-vous besoin de plus de temps?", 
         "lost-text": "PARTIE PERDUE", 
         "inclination-text": "INCLINAISON", 
         "incorrect-text": "SIGNAL ABSENT", 
@@ -255,12 +257,14 @@
     }, 
     "game": {
       "main": {
+        "timeout-button-text": "Yes", 
         "won-text": "GAME WON", 
         "level-text": "LEVEL", 
         "correct-text": "SIGNAL FOUND", 
         "data-text": "DATA", 
         "check-text": "CHECKING DATA", 
         "mass-text": "MASS", 
+        "timeout-body-text": "Do you need more time?", 
         "lost-text": "GAME OVER", 
         "inclination-text": "INCLINATION", 
         "incorrect-text": "NO SIGNAL FOUND", 
