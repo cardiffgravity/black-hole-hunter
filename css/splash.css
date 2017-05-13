@@ -173,24 +173,24 @@ body {
   display: flex;
   flex-direction: row-reverse;
   height: 100vh;
-  justify-content: space-around;
+  justify-content: space-between;
   left: 0;
   position: absolute;
   top: 0;
   width: 100vw;
-  padding: 0 30vw;
-  font-size: 2em;
+  padding: 21vh 21vw;
+  font-size: 5vh;
 }
 
 .start-item {
-  border-radius: 3px;
+  border-radius: 1vh;
   border: 1px solid rgba(255, 255, 255, 0.4);
   cursor: pointer;
   flex: 0 0 auto;
-  height: 30vh;
+  height: 58vh;
   padding: 0;
   margin: 0;
-  width: 15vw;
+  width: 26vw;
   background-color: black;
   box-sizing: border-box;
   display: flex;
@@ -201,26 +201,25 @@ body {
 .start-item:active {
   background-color: white;
   color: black;
-  height: 28.5vh;
-  margin: 0.75vh 0.375vw;
-  width: 14.25vw;
+  height: 55.1vh;
+  margin: 1.45vh 0.65vw;
+  width: 24.7vw;
 }
 
 .start-title {
   flex: 1 1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  text-align: center;
+  margin: 0.8em;
 }
 
 .start-name {
-  border-radius: 3px;
+  border-radius: 0.75vh;
   border: 1px solid white;
   cursor: pointer;
   display: inline;
   font-weight: normal;
-  margin: 0.75em;
-  padding: 4px 0;
+  margin: 0.8em;
+  padding: 0.15em 0;
   flex: 0 0 auto;
   display:flex;
   justify-content:center;

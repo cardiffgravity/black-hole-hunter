@@ -76,7 +76,8 @@
     <div id="start-screen">
       <template v-for="(loc, key) in locs">
       <div class="start-item" :data-loc-sel="key" @click="play">
-        <div class="start-title" v-html="loc.index.main['play-now']">
+        <div class="start-title">
+          Black Hole<br>Hunter
         </div>
         <div class="start-name" v-html="loc.index.main.title">
         </div>
@@ -91,13 +92,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 <script src='https://unpkg.com/vue/dist/vue.js'></script>
 <script src="./js/splash.js"></script>
-
-<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-<script type="text/javascript">
-    window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-bottom"};
-</script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
-<!-- End Cookie Consent plugin -->
 
 </body>
 </html>
