@@ -661,11 +661,19 @@
 }
 
 .home a {
+  display: inline-block;
   margin: 0;
   font-weight: normal;
   border-radius: 0.4vh;
   border: 1px solid white;
   padding: 0.1em 0.45em;
+}
+
+.home a:active {
+  transform: scale(0.95);
+  border-color: #575757;
+  color: white;
+  background-color: #575757;
 }
 
 /**
@@ -681,10 +689,17 @@
   border: 1px solid white;
   color: white;
   cursor: pointer;
-  display: inline;
+  display: inline-block;
   font-weight: normal;
   margin: 0;
   padding: 0.1em 0.45em;
+}
+
+.volume:active {
+  transform: scale(0.95);
+  border-color: #575757;
+  color: white;
+  background-color: #575757;
 }
 
 /**
@@ -711,6 +726,13 @@
 
 .loc-sel > div:last-child {
   margin-right: 0.75em;
+}
+
+.loc-sel > div:active {
+  transform: scale(0.95);
+  border-color: #575757;
+  color: white;
+  background-color: #575757;
 }
 
 .loc-sel > .active {
