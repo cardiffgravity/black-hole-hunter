@@ -700,7 +700,7 @@
 .loc-sel > div {
   margin-top: 1em;
   margin-bottom: 1em;
-  float: left;
+  float: right;
   display: inline-block;
   margin-right: 8px;
   cursor: pointer;
