@@ -20,7 +20,7 @@ gravitational waves through sound, developed by
 
 ## Acknowledgements
 
-We thank Ian Harry for his incredible work creating the original Black Hole
+We thank Ian Harry, David McKechan and Gerald Davies for their incredible work creating the original Black Hole
 Hunter.
 
 ## License
