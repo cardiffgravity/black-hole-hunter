@@ -8,8 +8,12 @@
       "main": {
         "home": "Page D'Accueil", 
         "about": "A propos", 
+        "listen": "", 
         "play-now": "Jouez!", 
         "title": "Fran&ccedil;ais"
+      }, 
+      "event": {
+        "text": ""
       }, 
       "welcome": {
         "text": "En utilisant la théorie générale de la relativité, les scientifiques\nont prédit que  lorsque que des trous noirs entrent en collision, ceux-ci\nproduisent des ondes gravitationnelles qui voyagent dans toutes les directions\nà la vitesse de la lumière.", 
@@ -40,6 +44,7 @@
     }, 
     "game": {
       "main": {
+        "spin-text": "", 
         "won-text": "PARTIE GAGNÉE", 
         "level-text": "NIVEAU", 
         "correct-text": "SIGNAL PRÉSENT", 
@@ -255,6 +260,7 @@
     }, 
     "game": {
       "main": {
+        "spin-text": "SPIN", 
         "won-text": "GAME WON", 
         "level-text": "LEVEL", 
         "correct-text": "SIGNAL FOUND", 
@@ -470,6 +476,7 @@
     }, 
     "game": {
       "main": {
+        "spin-text": "", 
         "won-text": "你贏了", 
         "level-text": "關卡", 
         "correct-text": "找到訊號", 
@@ -649,8 +656,12 @@
       "main": {
         "home": "Startseite", 
         "about": "Hintergrund", 
+        "listen": "", 
         "play-now": "Jetzt Spielen", 
         "title": "Deutsch"
+      }, 
+      "event": {
+        "text": ""
       }, 
       "welcome": {
         "text": "Spielen Sie Black Hole Hunter um nach Gravitationswellen zu suchen und enthüllen Sie Einsteins Vermächtnis für sich selbst.", 
@@ -681,6 +692,7 @@
     }, 
     "game": {
       "main": {
+        "spin-text": "", 
         "won-text": "SPIEL GEWONNEN", 
         "level-text": "STUFE", 
         "correct-text": "SIGNAL GEFUNDEN", 
@@ -860,8 +872,12 @@
       "main": {
         "home": "Home", 
         "about": "Informazioni", 
+        "listen": "", 
         "play-now": "Gioca Ora", 
         "title": "Italiano"
+      }, 
+      "event": {
+        "text": ""
       }, 
       "welcome": {
         "text": "Gioca a Black Hole Hunter (il cacciatore di buchi neri) per andare alla\nricerca delle onde gravitazionali e comprendere l'eredità di Einstein.", 
@@ -892,6 +908,7 @@
     }, 
     "game": {
       "main": {
+        "spin-text": "", 
         "won-text": "HAI VINTO", 
         "level-text": "LIVELLO", 
         "correct-text": "SEGNALE INDIVIDUATO", 
@@ -1071,8 +1088,12 @@
       "main": {
         "home": "Cartref", 
         "about": "Amdando", 
+        "listen": "", 
         "play-now": "Chwarewch nawr", 
         "title": "Cymraeg"
+      }, 
+      "event": {
+        "text": ""
       }, 
       "welcome": {
         "text": "Chwarewch Black Hole Hunter i chwilio am donnau disgyrchiant a\ndarganfyddwch etifddiaeth Einstein dros eich hun.", 
@@ -1103,6 +1124,7 @@
     }, 
     "game": {
       "main": {
+        "spin-text": "", 
         "won-text": "WEDI ENNILL Y GÊM", 
         "level-text": "LEFEL", 
         "correct-text": "WEDI DARGANFOD SIGNAL", 
@@ -1282,8 +1304,12 @@
       "main": {
         "home": "Acasa", 
         "about": "Despre", 
+        "listen": "", 
         "play-now": "Joaca Acum", 
         "title": "Română"
+      }, 
+      "event": {
+        "text": ""
       }, 
       "welcome": {
         "text": "Joaca Cautatorul de Unde Gravitationale sa gasesti tu insuti undele gravitationale ascunse in zgomot si sa\nafli despre geniul si mostenirea stiintifica lasate de Albert Einstein.", 
@@ -1314,6 +1340,7 @@
     }, 
     "game": {
       "main": {
+        "spin-text": "", 
         "won-text": "GAME WON", 
         "level-text": "LEVEL", 
         "correct-text": "SIGNAL FOUND", 
@@ -1493,8 +1520,12 @@
       "main": {
         "home": "Inicio", 
         "about": "Información", 
+        "listen": "", 
         "play-now": "Juega Ahora", 
         "title": "Espa&ntilde;ol"
+      }, 
+      "event": {
+        "text": ""
       }, 
       "welcome": {
         "text": "Juega a Black Hole Hunter para buscar ondas gravitacionales y descubrir\npor ti mismo/a el legado de Einstein.", 
@@ -1525,6 +1556,7 @@
     }, 
     "game": {
       "main": {
+        "spin-text": "", 
         "won-text": "GANASTE", 
         "level-text": "NIVEL", 
         "correct-text": "SEÑAL ENCONTRADA", 
