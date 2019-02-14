@@ -8,12 +8,12 @@
       "main": {
         "home": "Page D'Accueil", 
         "about": "A propos", 
-        "listen": "", 
+        "listen": "Listen To First Detection", 
         "play-now": "Jouez!", 
         "title": "Fran&ccedil;ais"
       }, 
       "event": {
-        "text": ""
+        "text": "Listen to GW150914, the first directly observed gravitational wave."
       }, 
       "welcome": {
         "text": "En utilisant la théorie générale de la relativité, les scientifiques\nont prédit que  lorsque que des trous noirs entrent en collision, ceux-ci\nproduisent des ondes gravitationnelles qui voyagent dans toutes les directions\nà la vitesse de la lumière.", 
@@ -44,7 +44,7 @@
     }, 
     "game": {
       "main": {
-        "spin-text": "", 
+        "spin-text": "SPIN", 
         "won-text": "PARTIE GAGNÉE", 
         "level-text": "NIVEAU", 
         "correct-text": "SIGNAL PRÉSENT", 
@@ -476,7 +476,7 @@
     }, 
     "game": {
       "main": {
-        "spin-text": "", 
+        "spin-text": "SPIN", 
         "won-text": "你贏了", 
         "level-text": "關卡", 
         "correct-text": "找到訊號", 
@@ -656,12 +656,12 @@
       "main": {
         "home": "Startseite", 
         "about": "Hintergrund", 
-        "listen": "", 
+        "listen": "Listen To First Detection", 
         "play-now": "Jetzt Spielen", 
         "title": "Deutsch"
       }, 
       "event": {
-        "text": ""
+        "text": "Listen to GW150914, the first directly observed gravitational wave."
       }, 
       "welcome": {
         "text": "Spielen Sie Black Hole Hunter um nach Gravitationswellen zu suchen und enthüllen Sie Einsteins Vermächtnis für sich selbst.", 
@@ -692,7 +692,7 @@
     }, 
     "game": {
       "main": {
-        "spin-text": "", 
+        "spin-text": "SPIN", 
         "won-text": "SPIEL GEWONNEN", 
         "level-text": "STUFE", 
         "correct-text": "SIGNAL GEFUNDEN", 
@@ -872,12 +872,12 @@
       "main": {
         "home": "Home", 
         "about": "Informazioni", 
-        "listen": "", 
+        "listen": "Listen To First Detection", 
         "play-now": "Gioca Ora", 
         "title": "Italiano"
       }, 
       "event": {
-        "text": ""
+        "text": "Listen to GW150914, the first directly observed gravitational wave."
       }, 
       "welcome": {
         "text": "Gioca a Black Hole Hunter (il cacciatore di buchi neri) per andare alla\nricerca delle onde gravitazionali e comprendere l'eredità di Einstein.", 
@@ -908,7 +908,7 @@
     }, 
     "game": {
       "main": {
-        "spin-text": "", 
+        "spin-text": "SPIN", 
         "won-text": "HAI VINTO", 
         "level-text": "LIVELLO", 
         "correct-text": "SEGNALE INDIVIDUATO", 
@@ -1088,12 +1088,12 @@
       "main": {
         "home": "Cartref", 
         "about": "Amdando", 
-        "listen": "", 
+        "listen": "Listen To First Detection", 
         "play-now": "Chwarewch nawr", 
         "title": "Cymraeg"
       }, 
       "event": {
-        "text": ""
+        "text": "Listen to GW150914, the first directly observed gravitational wave."
       }, 
       "welcome": {
         "text": "Chwarewch Black Hole Hunter i chwilio am donnau disgyrchiant a\ndarganfyddwch etifddiaeth Einstein dros eich hun.", 
@@ -1124,7 +1124,7 @@
     }, 
     "game": {
       "main": {
-        "spin-text": "", 
+        "spin-text": "SPIN", 
         "won-text": "WEDI ENNILL Y GÊM", 
         "level-text": "LEFEL", 
         "correct-text": "WEDI DARGANFOD SIGNAL", 
@@ -1304,12 +1304,12 @@
       "main": {
         "home": "Acasa", 
         "about": "Despre", 
-        "listen": "", 
+        "listen": "Listen To First Detection", 
         "play-now": "Joaca Acum", 
         "title": "Română"
       }, 
       "event": {
-        "text": ""
+        "text": "Listen to GW150914, the first directly observed gravitational wave."
       }, 
       "welcome": {
         "text": "Joaca Cautatorul de Unde Gravitationale sa gasesti tu insuti undele gravitationale ascunse in zgomot si sa\nafli despre geniul si mostenirea stiintifica lasate de Albert Einstein.", 
@@ -1340,7 +1340,7 @@
     }, 
     "game": {
       "main": {
-        "spin-text": "", 
+        "spin-text": "SPIN", 
         "won-text": "GAME WON", 
         "level-text": "LEVEL", 
         "correct-text": "SIGNAL FOUND", 
@@ -1520,12 +1520,12 @@
       "main": {
         "home": "Inicio", 
         "about": "Información", 
-        "listen": "", 
+        "listen": "Listen To First Detection", 
         "play-now": "Juega Ahora", 
         "title": "Espa&ntilde;ol"
       }, 
       "event": {
-        "text": ""
+        "text": "Listen to GW150914, the first directly observed gravitational wave."
       }, 
       "welcome": {
         "text": "Juega a Black Hole Hunter para buscar ondas gravitacionales y descubrir\npor ti mismo/a el legado de Einstein.", 
@@ -1556,7 +1556,7 @@
     }, 
     "game": {
       "main": {
-        "spin-text": "", 
+        "spin-text": "SPIN", 
         "won-text": "GANASTE", 
         "level-text": "NIVEL", 
         "correct-text": "SEÑAL ENCONTRADA", 

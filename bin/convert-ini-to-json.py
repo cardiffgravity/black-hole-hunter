@@ -51,19 +51,25 @@ for n in fileList:
 					if not entry in entries[section]:
 						entries[section].append(entry)
 	
-	# loop through localisations and create empty entries for those missing
+	# loop through localisations and add english entry as default or empty if no english entry
 	for l in locList:
 		for section in sections:
 			if not section in locs[l][n].keys():
 				print 'file = {0: <15}, section = {1: <15}{3}is missing from {2}'.format(n, section, l, ' '*25)
 				locs[l][n][section] = {}
 				for entry in entries[section]:
-					locs[l][n][section][entry] = ''
+					try:
+						locs[l][n][section][entry] = locs['en'][n][section][entry]
+					except:
+						locs[l][n][section][entry] = ''
 			else:
 				for entry in entries[section]:
 					if not entry in locs[l][n][section].keys():
 						print 'file = {0: <15}, section = {1: <15}, entry = {2: <15}is missing from {3}'.format(n, section, entry, l)
-						locs[l][n][section][entry] = ''
+						try:
+							locs[l][n][section][entry] = locs['en'][n][section][entry]
+						except:
+							locs[l][n][section][entry] = ''
 
 #
 # Dump loc to file
