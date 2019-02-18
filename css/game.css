@@ -336,6 +336,35 @@
   margin-bottom: 0.5em;
 }
 
+#wave-signal-info-two {
+  position: absolute;
+  bottom: 0px;
+  font-size: 0.7em;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,1.0);
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+  z-index: 666;
+}
+
+#wave-signal-info-two > div {
+  margin-bottom: 0.5em;
+}
+
+.fixed-width1 {
+  display: inline-block;
+  min-width: 50px;
+  width: 50px;
+  text-align: center;
+}
+
+.fixed-width2 {
+  display: inline-block;
+  min-width: 30px;
+  width: 30px;
+  text-align: center;
+}
+
 /**
  * Game::Player
  */

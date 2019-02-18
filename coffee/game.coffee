@@ -501,6 +501,14 @@ addTooltips = () ->
       'show': 1000
       'hide': 500
 
+addTooltips2 = () ->
+  $('#wave-signal-info-two').tooltip
+    placement: 'right'
+    container: 'body'
+    delay:
+      'show': 1000
+      'hide': 500
+
 game = new Vue
   el: '.container'
 
@@ -516,6 +524,8 @@ game = new Vue
       mass1: 10
       mass2: 10
       inclination: 90
+      spin1: [0, 0, 0]
+      spin2: [0, 0, 0]
     signalSrc: ""
     ob1:
       src: ""
@@ -555,26 +565,29 @@ game = new Vue
     wonText: () -> @locs[@loc].game.main['won-text']
     lostText: () -> @locs[@loc].game.main['lost-text']
     massText: () -> @locs[@loc].game.main['mass-text']
+    spinText: () -> @locs[@loc].game.main['spin-text']
     inclinationText: () -> @locs[@loc].game.main['inclination-text']
 
   created: () ->
     # Generate paths to random noise waveforms
-    sigBankIDs = (Math.floor(84*Math.random() + 1) for i in [0...4])
+    metadata = require "../signalBank.json"
+    noiseBankIDs = (Math.floor(metadata["nnoises"]*Math.random() + 1) for i in [0...4])
     for i in [0..3]
-      @["ob#{i+1}"].src = "signalBank/sigbank#{sigBankIDs[i]}/noise.mp3"
+      @["ob#{i+1}"].src = "noiseBank/noise_#{noiseBankIDs[i]}.wav"
 
     # Choose waveform that will contain a signal
     sigLoc = Math.floor 4*Math.random()
-    sigID = sigBankIDs[sigLoc]
-    @["ob#{sigLoc+1}"].src = "signalBank/sigbank#{sigID}/data#{@level}.mp3"
+    sigID = Math.floor metadata["nsignals"]*Math.random() + 1
+    @["ob#{sigLoc+1}"].src = "signalBank/sigbank#{sigID}/level_#{@level+3}.wav"
     @["ob#{sigLoc+1}"].signal = 1
-    @signalSrc = "signalBank/sigbank#{sigID}/hplus.mp3"
+    @signalSrc = "signalBank/sigbank#{sigID}/Waveform.wav"
 
     # Prepare signal metadata
-    metadata = require "../signalBank.json"
     @info.mass1 = metadata["info#{sigID}"].mass1
     @info.mass2 = metadata["info#{sigID}"].mass2
     @info.inclination = metadata["info#{sigID}"].inclination
+    @info.spin1 = metadata["info#{sigID}"].spin1
+    @info.spin2 = metadata["info#{sigID}"].spin2
 
     # Chose random quote
     @quoteNumber = Math.floor(32*Math.random() + 1)
@@ -586,6 +599,7 @@ game = new Vue
     carouselNormalization()
     addCheckPreloader()
     addTooltips()
+    addTooltips2()
 
   methods:
     play: () ->
@@ -613,9 +627,11 @@ game = new Vue
       if waveTarget == 'wave-signal'
         $('#check').hide()
         $('#wave-signal-info').show()
+        $('#wave-signal-info-two').show()
       else
         $('#check').show()
         $('#wave-signal-info').hide()
+        $('#wave-signal-info-two').hide()
 
     check: () ->
       # Toggle tick
