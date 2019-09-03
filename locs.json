@@ -1368,7 +1368,7 @@
         "text-1": "Twoim celem jest wysłuchanie poniższego sygnału, a następnie ustalenie, który z czterech plików danych zawiera ten sygnał. Na początek sygnały będą stosunkowo głośne. W miarę postępów w grze sygnały będą coraz cichsze.", 
         "text-2": "Kliknij na sygnał poniżej i naciśnij przycisk odtwarzania, aby go usłyszeć. Tak brzmiałaby fala grawitacyjna, gdyby nie było zakłóceń.", 
         "text-3": "Kliknij w każdy z plików danych poniżej i naciśnij przycisk odtwarzania, aby je usłyszeć. Pliki te zawierają dane z detektora fal grawitacyjnych. Detektory nie są idealne, dlatego pliki danych zawierają szum. Jeden z tych plików zawiera sygnał ukryty w hałasie. Twoim celem jest znalezienie tego pliku danych.", 
-        "text-4": "Jeśli uważasz, że znalazłeś plik danych zawierający sygnał, naciśnij zielony symbol w prawym dolnym rogu okna. Jeśli znajdziesz odpowiedni sygnał, możesz przejść do następnego poziomu, jeśli nie, stracisz ,,życie’’. Zaczynasz z <b>trzema</b> ,,życiami’’.", 
+        "text-4": "Jeśli uważasz, że znalazłeś plik danych zawierający sygnał, naciśnij zielony symbol w prawym dolnym rogu okna. Jeśli znajdziesz odpowiedni sygnał, możesz przejść do następnego poziomu, jeśli nie, stracisz ,,życie’’. Zaczynasz z 3. ,,życiami’’.", 
         "title-4": "Dokonaj wyboru", 
         "title-2": "Posłuchaj sygnału", 
         "title-3": "Posłuchaj danych", 
@@ -1381,7 +1381,7 @@
         "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=4blackholecollisions"
       }, 
       "quote19": {
-        "quote": "Oznaczenie <b>czarna dziura</b> zostało wymyślone przez Johna Wheelera w 1967 roku. Chociaż czarne dziury są niewidoczne w promieniowaniu elektromagnetycznym, są najbardziej świecącymi obiektami, gdy emitują fale grawitacyjne.", 
+        "quote": "Oznaczenie czarna dziura zostało wymyślone przez Johna Wheelera w 1967 roku. Chociaż czarne dziury są niewidoczne w promieniowaniu elektromagnetycznym, są najbardziej świecącymi obiektami, gdy emitują fale grawitacyjne.", 
         "weblink": "http://www.astro.cf.ac.uk/research/gravity/tutorial/?page=1blackholes"
       }, 
       "quote10": {
