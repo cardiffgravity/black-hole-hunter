@@ -7,7 +7,7 @@ import json
 #
 # Define the list of localisations and expect files ofr each
 #
-locList = ['cy', 'de', 'en', 'es', 'fr', 'it', 'ro', 'zh']
+locList = ['cy', 'de', 'en', 'es', 'fr', 'it', 'pl', 'ro', 'zh']
 fileList = ['endgame', 'game', 'index', 'quotes', 'tutorial']
 
 #
@@ -37,7 +37,7 @@ for l in locList:
 for n in fileList:
 	sections = []
 	entries = {}
-	
+
 	# loop through localisations and find all sections and entries within them
 	for l in locList:
 		for section in locs[l][n].keys():
@@ -50,7 +50,7 @@ for n in fileList:
 				for entry in locs[l][n][section].keys():
 					if not entry in entries[section]:
 						entries[section].append(entry)
-	
+
 	# loop through localisations and add english entry as default or empty if no english entry
 	for l in locList:
 		for section in sections:
