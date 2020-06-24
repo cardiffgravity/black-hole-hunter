@@ -353,8 +353,8 @@
 
 .fixed-width1 {
   display: inline-block;
-  min-width: 50px;
-  width: 50px;
+  min-width: 80px;
+  width: 80px;
   text-align: center;
 }
 
