@@ -7,7 +7,7 @@ import json
 #
 # Define the list of localisations and expect files ofr each
 #
-locList = ['cy', 'de', 'en', 'es', 'fr', 'it', 'pl', 'ro', 'zh']
+locList = ['cy', 'de', 'en', 'es', 'fr', 'hu', 'it', 'pl', 'ro', 'zh']
 fileList = ['endgame', 'game', 'index', 'quotes', 'tutorial']
 
 #
