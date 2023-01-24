@@ -8,7 +8,7 @@ gravitational waves through sound, developed by
 
 1. Install [Python](https://www.python.org/).
 2. Install [Node.js](https://nodejs.org).
-3. `git clone https://gravity.astro.cf.ac.uk/git/black-hole-hunter/`
+3. `git clone https://github.com/cardiffgravity/black-hole-hunter.git`
 4. Run `npm install .` in the root directory of the cloned website.
 5. Install `webpack` globally with `npm install -g webpack`.
 
