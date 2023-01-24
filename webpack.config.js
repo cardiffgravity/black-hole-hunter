@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 
 module.exports = {
-    debug: true,
     entry: {
         splash: './coffee/splash.coffee',
         game: './coffee/game.coffee',
@@ -13,18 +12,10 @@ module.exports = {
         filename: './js/[name].js'
     },
     module: {
-        loaders: [{
-          test: /\.coffee$/,
-          loader: "coffee"
-        },{
-          test: /\.scss$/,
-          loader: "file-loader?name=css/[name].css!extract!css!sass"
-        },{
-          test: /\.html$/,
-          loader: "raw"
-        },{
-          test: /\.json$/,
-          loader: "json"
-        }]
+        rules: [
+          {test: /\.coffee$/, use: "coffee-loader"},
+          {test: /\.scss$/, use: "file-loader?name=css/[name].css!extract!css!sass"},
+          {test: /\.html$/, use: "raw-loader"},
+        ]
     }
 };
